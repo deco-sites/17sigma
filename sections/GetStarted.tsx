@@ -24,7 +24,7 @@ export default function GetStarted({ enableInspectVSCode }: Props) {
           <div class="w-full md:w-1/2 p-6">
             <div class="md:max-w-lg">
               <h2 class="mb-3 font-bold text-base-content text-4xl">
-                Welcome to Live!
+                Welcome to Live! sdfdsfsdf
               </h2>
               <p class="text-lg">
                 You can create a new page by visiting it.
