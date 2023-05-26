@@ -24,6 +24,7 @@
 
 @layer components {
 
+
   /** Prevent scroll when modal is open */
   .no-scroll {
     overflow: hidden;
