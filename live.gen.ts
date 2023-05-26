@@ -12,6 +12,7 @@ import * as $$$$$$$$1 from "./sections/GetStarted.tsx";
 import * as $$$$$$$$2 from "./sections/Head.tsx";
 import * as $$$$$$$$3 from "./sections/Header.tsx";
 import * as $$$$$$$$4 from "./sections/Hero.tsx";
+import * as $$$$$$$$5 from "./sections/Teste.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -177,6 +178,7 @@ const manifest = {
     "deco-sites/17sigma/sections/Head.tsx": $$$$$$$$2,
     "deco-sites/17sigma/sections/Header.tsx": $$$$$$$$3,
     "deco-sites/17sigma/sections/Hero.tsx": $$$$$$$$4,
+    "deco-sites/17sigma/sections/Teste.tsx": $$$$$$$$5,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,

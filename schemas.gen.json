@@ -75,6 +75,7 @@
               "deco-sites/17sigma/sections/Head.tsx",
               "deco-sites/17sigma/sections/Header.tsx",
               "deco-sites/17sigma/sections/Hero.tsx",
+              "deco-sites/17sigma/sections/Teste.tsx",
               "deco-sites/std/sections/Analytics.tsx",
               "deco-sites/std/sections/configButterCMS.global.tsx",
               "deco-sites/std/sections/configOCC.global.tsx",
@@ -9696,6 +9697,22 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL1Rlc3RlLnRzeA==": {
+      "title": "deco-sites/17sigma/sections/Teste.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/17sigma/sections/Teste.tsx"
+          ],
+          "default": "deco-sites/17sigma/sections/Teste.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA==": {
       "title": "deco-sites/std/sections/Analytics.tsx",
       "type": "object",
@@ -10843,6 +10860,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0hlcm8udHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL1Rlc3RlLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA=="
