@@ -33,7 +33,7 @@ export default {
       "section": "#3f3cbb",
       "gray": "#121063",
       "text": "#565584",
-      "primaryteste": "#558bff",
+      "primary": "#558bff",
       "white": "#FFF",
     },
   },

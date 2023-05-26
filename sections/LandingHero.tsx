@@ -8,7 +8,11 @@ export interface Props {
 }
 
 export default function LandingHero(
-  { titleHero='We bet on talent to achieve 17Sigma results.', filterTextHighLight = '17Sigma', videoUrl }: Props,
+  {
+    titleHero = "We bet on talent to achieve 17Sigma results.",
+    filterTextHighLight = "17Sigma",
+    videoUrl,
+  }: Props,
 ) {
   let indexTextHighLight = 0;
 

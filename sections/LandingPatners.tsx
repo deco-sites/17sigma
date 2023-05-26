@@ -1,6 +1,3 @@
-
 export default function LandingPatners() {
-  return (
-    <div>LandingPatners</div>
-  )
+  return <div>LandingPatners</div>;
 }

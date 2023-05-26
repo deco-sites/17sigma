@@ -1,7 +1,3 @@
-
-
 export default function LandingVideoBrand() {
-  return (
-    <div>LandingVideoBrand</div>
-  )
+  return <div>LandingVideoBrand</div>;
 }
