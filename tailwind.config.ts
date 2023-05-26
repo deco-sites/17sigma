@@ -23,4 +23,11 @@ export const theme = {
 
 export default {
   content: ["./**/*.tsx"],
+   theme: {
+    // https://tailwindcss.com/docs/container#centering-by-default
+    colors: {
+    transparent: 'transparent',
+      current: 'currentColor',
+      'primary': '#A2D2FF',
+    }
 };
