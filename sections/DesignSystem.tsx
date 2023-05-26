@@ -139,6 +139,42 @@ export interface Colors {
    * @description Will be a readable tone of info if not specified
    */
   "info-content"?: string;
+
+  /**
+   * @format color
+   * @default rgba(0,0,0, 0.9)
+   */
+  "landing-bg-header"?:string;
+
+   /**
+   * @format color
+   * @default #1f1f26
+   */
+  "landing-background"?: string;
+
+   /**
+   * @format color
+   * @default #24232a
+   */
+  "landing-section"?:string;
+
+   /**
+   * @format color
+   * @default #558bff
+   */
+  "landing-primary"?:string;
+
+  /**
+   * @format color
+   * @default transparent
+   */
+  "transparent"?: string ,
+
+  /**
+   * @format color
+   * @default currentColor
+   */
+  "current"?: string,
 }
 
 export interface Miscellaneous {
@@ -206,11 +242,11 @@ export interface Miscellaneous {
 
 export interface Font {
   /**
-   * @default 'Albert Sans'
+   * @default 'Spectral'
    */
   fontFamily: string;
   /**
-   * @default @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700&display=swap');
+   * @default @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@500;800&display=swap');
    * \@format css
    */
   styleInnerHtml: string;
@@ -305,9 +341,9 @@ function Section({
   colors,
   miscellaneous,
   fonts = {
-    fontFamily: "Albert Sans",
+    fontFamily: "Spectral",
     styleInnerHtml:
-      "@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700&display=swap');",
+      "@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@500;800&display=swap');",
   },
 }: Props) {
   const id = useId();

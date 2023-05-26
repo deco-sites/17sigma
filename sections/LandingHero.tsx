@@ -3,6 +3,7 @@ import type { Video as LiveVideo } from "deco-sites/std/components/types.ts";
 
 export interface Props {
   titleHero: string;
+   /** @description choose which title words will be highlighted*/
   filterTextHighLight: string;
   videoUrl: LiveVideo;
 }
@@ -39,9 +40,9 @@ export default function LandingHero(
         <div className="w-[min(100vw,1320px)] mr-auto ml-auto ">
           {titleHero && filterTextHighLight &&
             (
-              <h1 className="text-[3.2rem] z-10 w-full md:w-6/12">
+              <h1 className="text-[3.2rem] z-10 w-full md:w-6/12 text-landing-primary" >
                 {textHeroInit}{" "}
-                <span class="text-gray-50 ">{` ${filterTextHighLight} `}</span>
+                <span class="text-white">{` ${filterTextHighLight} `}</span>
                 {" "}
                 {textHeroRest}
               </h1>

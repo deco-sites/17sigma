@@ -7149,6 +7149,60 @@
           "format": "color",
           "description": "Will be a readable tone of info if not specified",
           "title": "Info-content"
+        },
+        "landing-bg-header": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "default": "rgba(0,0,0, 0.9)",
+          "title": "Landing-bg-header"
+        },
+        "landing-background": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "default": "#1f1f26",
+          "title": "Landing-background"
+        },
+        "landing-section": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "default": "#24232a",
+          "title": "Landing-section"
+        },
+        "landing-primary": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "default": "#558bff",
+          "title": "Landing-primary"
+        },
+        "transparent": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "default": "transparent",
+          "title": "Transparent"
+        },
+        "current": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "color",
+          "default": "currentColor",
+          "title": "Current"
         }
       },
       "required": [
@@ -7247,7 +7301,7 @@
       "properties": {
         "fontFamily": {
           "type": "string",
-          "default": "'Albert Sans'",
+          "default": "'Spectral'",
           "title": "Font Family"
         },
         "styleInnerHtml": {
@@ -7369,6 +7423,7 @@
         },
         "filterTextHighLight": {
           "type": "string",
+          "description": "choose which title words will be highlighted",
           "title": "Filter Text High Light"
         },
         "videoUrl": {

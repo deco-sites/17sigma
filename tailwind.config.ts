@@ -8,7 +8,12 @@ export const theme = {
   "warning": "hsl(43 100% 95%)",
   "error": "hsl(9 100% 95%)",
   "info": "hsl(220 100% 97%)",
-
+  "transparent": "transparent",
+  "current": "currentColor",
+  "landing-bg-header": "rgba(0,0,0, 0.9)",
+  "landing-background": "#1f1f26",
+  "landing-section": "#24232a",
+  "landing-primary": "#558bff",
   "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
   "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element
   "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
@@ -26,16 +31,14 @@ export default {
   theme: {
     extend: {},
     colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      "bg-header": "rgba(0,0,0, 0.9)",
-      "background": "#1f1f26",
-      "section": "#3f3cbb",
-      "gray": "#121063",
-      "text": "#565584",
-      "primary": "#558bff",
+      "transparent": "transparent",
+      "current": "currentColor",
+      "landing-bg-header": "rgba(0,0,0, 0.9)",
+      "landing-background": "#1f1f26",
+      "landing-section": "#24232a",
+      "landing-primary": "#558bff",
       "white": "#FFF",
-    },
+    }
   },
   plugins: [],
 };
