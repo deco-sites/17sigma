@@ -11,21 +11,21 @@ export default function Header({ title, imageUrl }: Props) {
   return (
     <header className="fixed z-10 bg-gradient-to-b from-bg-header to-transparent w-screen pl-4 pr-4 h-[100px] pt-4">
       <div className="w-[min(100vw,1320px)] mr-auto ml-auto flex justify-between items-center">
-      {title ? title : (
-        <Image
-          className={"max-w-full max-h-[60px"}
-          src={imageUrl ? imageUrl : asset(`/logo.webp`)}
-          sizes="(max-width: 100%)"
-          width={120}
-          height={60}
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-          preload
-          title={title}
-        />
-      )}
-    
+        {title ? title : (
+          <Image
+            className={"max-w-full max-h-[60px"}
+            src={imageUrl ? imageUrl : asset(`/logo.webp`)}
+            sizes="(max-width: 100%)"
+            width={120}
+            height={60}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            preload
+            title={title}
+          />
+        )}
+
         <nav>
           <ul className="flex text-white gap-5 justify-between items-center uppercase">
             <li>

@@ -26,17 +26,16 @@ export default {
   theme: {
     extend: {},
     colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      'bg-header':'rgba(0,0,0, 0.9)',
-      'background': '#1f1f26',
-      'section': '#3f3cbb',
-      'gray': '#121063',
-      'text': '#565584',
-      'primary':'#558bff',
-      'white':"#FFF"
+      transparent: "transparent",
+      current: "currentColor",
+      "bg-header": "rgba(0,0,0, 0.9)",
+      "background": "#1f1f26",
+      "section": "#3f3cbb",
+      "gray": "#121063",
+      "text": "#565584",
+      "primary": "#558bff",
+      "white": "#FFF",
     },
   },
   plugins: [],
 };
-
