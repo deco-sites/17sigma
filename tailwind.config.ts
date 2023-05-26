@@ -26,6 +26,6 @@ export default {
    theme: {
     // https://tailwindcss.com/docs/container#centering-by-default
     colors: {
-      'primary-teste': '#A2D2FF',
+      'primaryteste': '#A2D2FF',
     }
 };
