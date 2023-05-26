@@ -73,8 +73,12 @@
               "deco-sites/17sigma/sections/DesignSystem.tsx",
               "deco-sites/17sigma/sections/GetStarted.tsx",
               "deco-sites/17sigma/sections/Head.tsx",
-              "deco-sites/17sigma/sections/Header.tsx",
-              "deco-sites/17sigma/sections/Hero.tsx",
+              "deco-sites/17sigma/sections/LandingFooter.tsx",
+              "deco-sites/17sigma/sections/LandingForm.tsx",
+              "deco-sites/17sigma/sections/LandingHeader.tsx",
+              "deco-sites/17sigma/sections/LandingHero.tsx",
+              "deco-sites/17sigma/sections/LandingPatners.tsx",
+              "deco-sites/17sigma/sections/LandingVideoBrand.tsx",
               "deco-sites/17sigma/sections/Teste.tsx",
               "deco-sites/std/sections/Analytics.tsx",
               "deco-sites/std/sections/configButterCMS.global.tsx",
@@ -7333,7 +7337,7 @@
       "format": "image-uri",
       "title": "Image"
     },
-    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0hlYWRlci50c3g=@Props": {
+    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdIZWFkZXIudHN4@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -7348,17 +7352,15 @@
           "title": "Image Url"
         }
       },
-      "required": [
-        "imageUrl"
-      ],
-      "title": "deco-sites/17sigma/sections/Header.tsx@Props"
+      "required": [],
+      "title": "deco-sites/17sigma/sections/LandingHeader.tsx@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Video": {
       "type": "string",
       "format": "video-uri",
       "title": "Video"
     },
-    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0hlcm8udHN4@Props": {
+    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdIZXJvLnRzeA==@Props": {
       "type": "object",
       "properties": {
         "titleHero": {
@@ -7379,7 +7381,7 @@
         "filterTextHighLight",
         "videoUrl"
       ],
-      "title": "deco-sites/17sigma/sections/Hero.tsx@Props"
+      "title": "deco-sites/17sigma/sections/LandingHero.tsx@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props": {
       "type": "object",
@@ -9655,14 +9657,9 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0hlYWRlci50c3g=": {
-      "title": "deco-sites/17sigma/sections/Header.tsx",
+    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdGb290ZXIudHN4": {
+      "title": "deco-sites/17sigma/sections/LandingFooter.tsx",
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0hlYWRlci50c3g=@Props"
-        }
-      ],
       "required": [
         "__resolveType"
       ],
@@ -9670,18 +9667,34 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/17sigma/sections/Header.tsx"
+            "deco-sites/17sigma/sections/LandingFooter.tsx"
           ],
-          "default": "deco-sites/17sigma/sections/Header.tsx"
+          "default": "deco-sites/17sigma/sections/LandingFooter.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0hlcm8udHN4": {
-      "title": "deco-sites/17sigma/sections/Hero.tsx",
+    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdGb3JtLnRzeA==": {
+      "title": "deco-sites/17sigma/sections/LandingForm.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/17sigma/sections/LandingForm.tsx"
+          ],
+          "default": "deco-sites/17sigma/sections/LandingForm.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdIZWFkZXIudHN4": {
+      "title": "deco-sites/17sigma/sections/LandingHeader.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0hlcm8udHN4@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdIZWFkZXIudHN4@Props"
         }
       ],
       "required": [
@@ -9691,9 +9704,62 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/17sigma/sections/Hero.tsx"
+            "deco-sites/17sigma/sections/LandingHeader.tsx"
           ],
-          "default": "deco-sites/17sigma/sections/Hero.tsx"
+          "default": "deco-sites/17sigma/sections/LandingHeader.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdIZXJvLnRzeA==": {
+      "title": "deco-sites/17sigma/sections/LandingHero.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdIZXJvLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/17sigma/sections/LandingHero.tsx"
+          ],
+          "default": "deco-sites/17sigma/sections/LandingHero.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdQYXRuZXJzLnRzeA==": {
+      "title": "deco-sites/17sigma/sections/LandingPatners.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/17sigma/sections/LandingPatners.tsx"
+          ],
+          "default": "deco-sites/17sigma/sections/LandingPatners.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdWaWRlb0JyYW5kLnRzeA==": {
+      "title": "deco-sites/17sigma/sections/LandingVideoBrand.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/17sigma/sections/LandingVideoBrand.tsx"
+          ],
+          "default": "deco-sites/17sigma/sections/LandingVideoBrand.tsx"
         }
       }
     },
@@ -10856,10 +10922,22 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0hlYWQudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0hlYWRlci50c3g="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdGb290ZXIudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0hlcm8udHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdGb3JtLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdIZWFkZXIudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdIZXJvLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdQYXRuZXJzLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdWaWRlb0JyYW5kLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL1Rlc3RlLnRzeA=="

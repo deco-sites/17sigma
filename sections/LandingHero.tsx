@@ -7,8 +7,8 @@ export interface Props {
   videoUrl: LiveVideo;
 }
 
-export default function Hero(
-  { titleHero, filterTextHighLight, videoUrl }: Props,
+export default function LandingHero(
+  { titleHero='We bet on talent to achieve 17Sigma results.', filterTextHighLight = '17Sigma', videoUrl }: Props,
 ) {
   let indexTextHighLight = 0;
 
