@@ -6,6 +6,5 @@ export interface Props {
 }
 
 export default function GetStarted({ enableInspectVSCode }: Props) {
-
   return <h1>Home</h1>;
 }

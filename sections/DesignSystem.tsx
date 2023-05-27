@@ -144,37 +144,37 @@ export interface Colors {
    * @format color
    * @default rgba(0,0,0, 0.9)
    */
-  "landing-bg-header"?:string;
+  "landing-bg-header"?: string;
 
-   /**
+  /**
    * @format color
    * @default #1f1f26
    */
   "landing-background"?: string;
 
-   /**
+  /**
    * @format color
    * @default #24232a
    */
-  "landing-section"?:string;
+  "landing-section"?: string;
 
-   /**
+  /**
    * @format color
    * @default #558bff
    */
-  "landing-primary"?:string;
+  "landing-primary"?: string;
 
   /**
    * @format color
    * @default transparent
    */
-  "transparent"?: string ,
+  "transparent"?: string;
 
   /**
    * @format color
    * @default currentColor
    */
-  "current"?: string,
+  "current"?: string;
 }
 
 export interface Miscellaneous {
@@ -343,7 +343,7 @@ function Section({
   fonts = {
     fontFamily: "Spectral",
     styleInnerHtml:
-      "@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@500;800&display=swap');",
+      "@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700;800&display=swap');",
   },
 }: Props) {
   const id = useId();
@@ -356,6 +356,8 @@ function Section({
     <Head>
       <meta name="theme-color" content={theme["primary"]} />
       <meta name="msapplication-TileColor" content={theme["primary"]} />
+      <meta name="description" content="At 17Sigma we support disruptive and innovative Latin American entrepreneurs in their early stages to push forward the next generation of regional leaders and companies. Founded to collaborate with teams, backing ideas that have the potential to disrupt the status-quo and build a stronger, better, and fairer future./"></meta>
+      <title>17Sigma</title>
       <style
         id={`__DESIGN_SYSTEM_FONT-${id}`}
         dangerouslySetInnerHTML={{ __html: fonts.styleInnerHtml }}

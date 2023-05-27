@@ -78,6 +78,7 @@
               "deco-sites/17sigma/sections/LandingHeader.tsx",
               "deco-sites/17sigma/sections/LandingHero.tsx",
               "deco-sites/17sigma/sections/LandingPatners.tsx",
+              "deco-sites/17sigma/sections/LandingTeams.tsx",
               "deco-sites/17sigma/sections/LandingVideoBrand.tsx",
               "deco-sites/17sigma/sections/Teste.tsx",
               "deco-sites/std/sections/Analytics.tsx",
@@ -9802,6 +9803,22 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdUZWFtcy50c3g=": {
+      "title": "deco-sites/17sigma/sections/LandingTeams.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/17sigma/sections/LandingTeams.tsx"
+          ],
+          "default": "deco-sites/17sigma/sections/LandingTeams.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdWaWRlb0JyYW5kLnRzeA==": {
       "title": "deco-sites/17sigma/sections/LandingVideoBrand.tsx",
       "type": "object",
@@ -10990,6 +11007,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdQYXRuZXJzLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdUZWFtcy50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdWaWRlb0JyYW5kLnRzeA=="

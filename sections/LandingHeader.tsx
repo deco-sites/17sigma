@@ -9,8 +9,8 @@ export interface Props {
 
 export default function LandingHeader({ title, imageUrl }: Props) {
   return (
-    <header className="fixed z-10 bg-gradient-to-b from-landing-bg-header to-transparent w-screen pl-4 pr-4 h-[100px] pt-4">
-      <div className="w-[min(100vw,1320px)] mr-auto ml-auto flex justify-between items-center">
+    <header className="fixed z-10 bg-gradient-to-b from-landing-bg-header to-transparent w-screen h-[100px] pt-4">
+      <div className="w-[min(100vw,1320px)] pl-4 pr-4 mr-auto ml-auto flex justify-between items-center">
         <a href="/">
           {title ? title : (
             <Image
@@ -24,20 +24,30 @@ export default function LandingHeader({ title, imageUrl }: Props) {
               fetchPriority="high"
               preload
               title={title}
-              alt='logo-site'
+              alt="logo-site"
             />
           )}
         </a>
         <nav>
           <ul className="flex text-white gap-5 justify-between items-center uppercase">
             <li>
-              <a href="#why" className="text-[1.2rem] no-underline" title="why"> Why</a>
+              <a href="#why" className="text-[1.2rem] no-underline" title="why">
+                Why
+              </a>
             </li>
             <li>
-              <a href="#what" className="text-[1.2rem] no-underline" title="what">What</a>
+              <a
+                href="#what"
+                className="text-[1.2rem] no-underline"
+                title="what"
+              >
+                What
+              </a>
             </li>
             <li>
-              <a href="#who" className="text-[1.2rem] no-underline" title="who"> Who</a>
+              <a href="#who" className="text-[1.2rem] no-underline" title="who">
+                Who
+              </a>
             </li>
           </ul>
         </nav>

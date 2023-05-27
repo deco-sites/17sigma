@@ -15,8 +15,9 @@ import * as $$$$$$$$4 from "./sections/LandingForm.tsx";
 import * as $$$$$$$$5 from "./sections/LandingHeader.tsx";
 import * as $$$$$$$$6 from "./sections/LandingHero.tsx";
 import * as $$$$$$$$7 from "./sections/LandingPatners.tsx";
-import * as $$$$$$$$8 from "./sections/LandingVideoBrand.tsx";
-import * as $$$$$$$$9 from "./sections/Teste.tsx";
+import * as $$$$$$$$8 from "./sections/LandingTeams.tsx";
+import * as $$$$$$$$9 from "./sections/LandingVideoBrand.tsx";
+import * as $$$$$$$$10 from "./sections/Teste.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -185,8 +186,9 @@ const manifest = {
     "deco-sites/17sigma/sections/LandingHeader.tsx": $$$$$$$$5,
     "deco-sites/17sigma/sections/LandingHero.tsx": $$$$$$$$6,
     "deco-sites/17sigma/sections/LandingPatners.tsx": $$$$$$$$7,
-    "deco-sites/17sigma/sections/LandingVideoBrand.tsx": $$$$$$$$8,
-    "deco-sites/17sigma/sections/Teste.tsx": $$$$$$$$9,
+    "deco-sites/17sigma/sections/LandingTeams.tsx": $$$$$$$$8,
+    "deco-sites/17sigma/sections/LandingVideoBrand.tsx": $$$$$$$$9,
+    "deco-sites/17sigma/sections/Teste.tsx": $$$$$$$$10,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,

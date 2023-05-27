@@ -38,7 +38,7 @@ export default {
       "landing-section": "#24232a",
       "landing-primary": "#558bff",
       "white": "#FFF",
-    }
+    },
   },
   plugins: [],
 };
