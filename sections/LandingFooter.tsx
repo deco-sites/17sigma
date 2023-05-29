@@ -8,5 +8,5 @@ export default function LandingFooter() {
       <a href="#">Twitter</a>
       <a href="#">LinkedIn</a>
     </footer>
-  )
+  );
 }

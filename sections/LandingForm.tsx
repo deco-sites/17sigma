@@ -35,7 +35,8 @@ export default function LandingForm() {
                   name="textarea"
                   id="textareaId"
                   placeholder="SAY SOMETHING *"
-                ></textarea>
+                >
+                </textarea>
               </div>
             </form>
           </div>
@@ -56,5 +57,5 @@ export default function LandingForm() {
         </div>
       </div>
     </>
-  )
+  );
 }

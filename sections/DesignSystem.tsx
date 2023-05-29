@@ -356,7 +356,11 @@ function Section({
     <Head>
       <meta name="theme-color" content={theme["primary"]} />
       <meta name="msapplication-TileColor" content={theme["primary"]} />
-      <meta name="description" content="At 17Sigma we support disruptive and innovative Latin American entrepreneurs in their early stages to push forward the next generation of regional leaders and companies. Founded to collaborate with teams, backing ideas that have the potential to disrupt the status-quo and build a stronger, better, and fairer future./"></meta>
+      <meta
+        name="description"
+        content="At 17Sigma we support disruptive and innovative Latin American entrepreneurs in their early stages to push forward the next generation of regional leaders and companies. Founded to collaborate with teams, backing ideas that have the potential to disrupt the status-quo and build a stronger, better, and fairer future./"
+      >
+      </meta>
       <title>17Sigma</title>
       <style
         id={`__DESIGN_SYSTEM_FONT-${id}`}
