@@ -1,7 +1,6 @@
 {
   "definitions": {
     "Resolvable": {
-      "$id": "Resolvable",
       "title": "Select from saved",
       "required": [
         "__resolveType"
@@ -7978,7 +7977,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@152d1319cf173b0e492fff2a74a4a49d|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|cb3b0ab6c031881f6e4ed15f2411e9c0": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -7996,13 +7995,13 @@
           ]
         }
       ],
-      "title": "152d1319cf173b0e492fff2a74a4a49d|WorkflowRef"
+      "title": "WorkflowRef|cb3b0ab6c031881f6e4ed15f2411e9c0"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@152d1319cf173b0e492fff2a74a4a49d|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|cb3b0ab6c031881f6e4ed15f2411e9c0",
           "title": "Workflow"
         },
         "id": {
