@@ -2,7 +2,7 @@
 
 //Resposta: Tu é brabo!
 
-import ButtonForm from '../components/ButtonForm.tsx'
+import ButtonForm from "../components/ButtonForm.tsx";
 
 export default function LandingForm() {
   return (

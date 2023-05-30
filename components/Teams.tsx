@@ -1,6 +1,6 @@
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
-interface TeamsComponentProps {
+export interface TeamsComponentProps {
   name: string;
   office?: string;
   imageUrl: string;
