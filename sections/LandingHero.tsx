@@ -1,5 +1,6 @@
 import { asset } from "$fresh/runtime.ts";
 import type { Video as LiveVideo } from "deco-sites/std/components/types.ts";
+import Container from '../components/Container.tsx';
 
 export interface Props {
   titleHero: string;
@@ -15,10 +16,11 @@ export default function LandingHero(
     videoUrl,
   }: Props,
 ) {
-  let indexTextHighLight = 0;
 
+  let indexTextHighLight = 0;
   const splitHero = titleHero.split(" ").filter((text, index) => {
-    if (text === filterTextHighLight) {
+    if (text === filterTextHighLight) 
+    {
       indexTextHighLight = index;
     }
 
@@ -33,29 +35,27 @@ export default function LandingHero(
   return (
     <div>
       <div className="absolute -z-10 top-0 h-full w-full object-cover">
-        <video autoPlay loop className="h-full w-full object-cover">
+        <video playsInline autoPlay muted loop  className="h-full w-full object-cover">
           <source
-            src={videoUrl ? videoUrl : asset(`/hero-video.mp4`)}
+            src={videoUrl ? videoUrl : asset('/hero-video.mp4')}
             type="video/mp4"
           />
         </video>
       </div>
-      <div
-        id="hero"
-        className="flex items-center justify-start h-screen w-100 relative bg-bottom bg-cover bg-no-repeat no-repeat"
-        style={`background-image: url(${asset(`/herobg.webp`)})`}
+      <div id="hero" style={`background-image:url('${asset('/herobg.webp')}')`} 
+        className={`bg-hero-overlay md:bg-transparent md:bg-none flex items-center justify-start h-screen w-100 relative bg-bottom bg-cover bg-no-repeat no-repeat `}
       >
-        <div className="w-[min(100vw,1320px)] mr-auto ml-auto pl-4 pr-4">
+        <Container>
           {titleHero && filterTextHighLight &&
             (
-              <h1 className="text-[3.2rem] z-10 w-[565px] max-w-full text-landing-primary font-semibold leading-[0.98em]">
+              <h1 className="text-[3rem] xxl:text-[3.2rem] z-10 w-[565px] max-w-full text-landing-primary font-semibold leading-[0.98em]">
                 {textHeroInit}{" "}
                 <span class="text-white">{` ${filterTextHighLight} `}</span>
                 {" "}
                 {textHeroRest}
               </h1>
             )}
-        </div>
+        </Container>
       </div>
     </div>
   );
