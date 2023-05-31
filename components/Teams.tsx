@@ -1,16 +1,16 @@
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
-export interface TeamsComponentProps {
-  name: string;
+interface TeamsComponentProps {
+  name?: string;
   office?: string;
-  imageUrl: string;
+  imageUrl?: string;
   linkedinIn?: string;
   twitter?: string;
-  small?: boolean;
+  destaque?: boolean;
 }
 
 export default function TeamsComponent(
-  { name, office, imageUrl, linkedinIn, twitter, small }: TeamsComponentProps,
+  { name, office, imageUrl, linkedinIn, twitter, destaque }: TeamsComponentProps,
 ) {
   return (
     <div>
@@ -20,12 +20,12 @@ export default function TeamsComponent(
           <div className="absolute bottom-7 right-7 opacity-0 group-hover:opacity-100 flex items-center gap-2">
             {linkedinIn && (
               <a href={linkedinIn} target="_blank" className="text-white">
-                <FaLinkedinIn size={small ? 24 : 32} />
+                <FaLinkedinIn size={destaque ? 24 : 32} />
               </a>
             )}
             {twitter && (
               <a href={twitter} target="_blank" className="text-white">
-                <FaTwitter size={small ? 24 : 32} />
+                <FaTwitter size={destaque ? 24 : 32} />
               </a>
             )}
           </div>
