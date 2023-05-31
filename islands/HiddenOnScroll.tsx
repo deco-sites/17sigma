@@ -29,5 +29,5 @@ export default function HiddenOnScroll({ idElement }: Props) {
     });
   }, [scrollTop]);
 
-  return <></>;
+  return <> </>;
 }
