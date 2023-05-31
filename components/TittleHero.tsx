@@ -13,9 +13,9 @@ export interface Props {
 export default function TitleHero(props: Props) {
   const [textList] = useState<Array<TextProps>>(
     Array.isArray(props.texts) ? props.texts : [
-      {highLight:false,text:"We bet on talent to achieve"},
-      {highLight:true,text:" 17Sigma"},
-      {highLight:false,text:" results."}
+      { highLight: false, text: "We bet on talent to achieve" },
+      { highLight: true, text: " 17Sigma" },
+      { highLight: false, text: " results." },
     ],
   );
 

@@ -34,7 +34,9 @@ export default function LandingHero(
         </video>
       </div>
       <div
-        style={`background-image:url(${backgroundImageUrl ? backgroundImageUrl : asset("/herobg.webp")})`}
+        style={`background-image:url(${
+          backgroundImageUrl ? backgroundImageUrl : asset("/herobg.webp")
+        })`}
         className="hidden md:block absolute bg-right-bottom z-2 top-0 left-0 w-full h-full pointer-events-none bg-cover bg-no-repeat"
       >
       </div>
