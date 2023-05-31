@@ -7546,6 +7546,33 @@
       "required": [],
       "title": "deco-sites/17sigma/sections/LandingHeader.tsx@Props"
     },
+    "ZGVjby1zaXRlcy8xN3NpZ21hL2NvbXBvbmVudHMvVGl0dGxlSGVyby50c3g=@TextProps": {
+      "type": "object",
+      "properties": {
+        "highLight": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "High Light"
+        },
+        "text": {
+          "type": "string",
+          "title": "Text"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "TextProps"
+    },
+    "ZGVjby1zaXRlcy8xN3NpZ21hL2NvbXBvbmVudHMvVGl0dGxlSGVyby50c3g=@TextProps[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL2NvbXBvbmVudHMvVGl0dGxlSGVyby50c3g=@TextProps"
+      },
+      "title": "TextProps[]"
+    },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Video": {
       "type": "string",
       "format": "video-uri",
@@ -7554,18 +7581,13 @@
     "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdIZXJvLnRzeA==@Props": {
       "type": "object",
       "properties": {
-        "titleHero": {
-          "type": "string",
-          "title": "Title Hero"
-        },
-        "filterTextHighLight": {
-          "type": "string",
-          "description": "choose which title words will be highlighted",
-          "title": "Filter Text High Light"
+        "title": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL2NvbXBvbmVudHMvVGl0dGxlSGVyby50c3g=@TextProps[]",
+          "title": "Title"
         },
         "videoUrl": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Video",
-          "description": "maximum size limite 20mb",
+          "description": "maximum size limite 25mb",
           "title": "Video Url"
         },
         "backgroundImageUrl": {
@@ -7574,8 +7596,7 @@
         }
       },
       "required": [
-        "titleHero",
-        "filterTextHighLight",
+        "title",
         "videoUrl"
       ],
       "title": "deco-sites/17sigma/sections/LandingHero.tsx@Props"
