@@ -1,7 +1,7 @@
 import { useState } from "preact/hooks";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import Image from "deco-sites/std/components/Image.tsx";
-import Container from '../components/Container.tsx'
+import Container from "../components/Container.tsx";
 import TeamsComponent from "../components/Teams.tsx";
 
 export type TeamsProps = {
@@ -11,17 +11,17 @@ export type TeamsProps = {
   linkedinIn?: string;
   twitter?: string;
   destaque?: boolean;
-}
+};
 
 export interface Props {
- teans: TeamsProps[]
+  teans: TeamsProps[];
 }
 
 export default function LandingTeams(props: Props) {
   const [tableList] = useState<Array<TeamsProps>>(
     Array.isArray(props.teans) ? props.teans : [],
   );
-console.log(tableList)
+  console.log(tableList);
   return (
     <div className="bg-landing-section pt-20 pb-16">
       <Container>

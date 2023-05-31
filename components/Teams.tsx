@@ -10,7 +10,8 @@ interface TeamsComponentProps {
 }
 
 export default function TeamsComponent(
-  { name, office, imageUrl, linkedinIn, twitter, destaque }: TeamsComponentProps,
+  { name, office, imageUrl, linkedinIn, twitter, destaque }:
+    TeamsComponentProps,
 ) {
   return (
     <div>
