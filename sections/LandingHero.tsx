@@ -1,6 +1,5 @@
 import { asset } from "$fresh/runtime.ts";
 import type { Video as LiveVideo, Image as LiveImage} from "deco-sites/std/components/types.ts";
-import Image from "deco-sites/std/components/Image.tsx";
 import Container from "../components/Container.tsx";
 
 export interface Props {
@@ -23,7 +22,8 @@ export default function LandingHero(
 
   let indexTextHighLight = 0;
   const splitHero = titleHero.split(" ").filter((text, index) => {
-    if (text === filterTextHighLight) {
+    if (text === filterTextHighLight) 
+    {
       indexTextHighLight = index;
     }
 

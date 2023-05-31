@@ -1,5 +1,4 @@
-
-import { useRef,useEffect } from 'preact/hooks';
+import { useEffect, useRef } from "preact/hooks";
 import { asset } from "$fresh/runtime.ts";
 import Image from "deco-sites/std/components/Image.tsx";
 import Header from "../components/Header.tsx";
@@ -12,8 +11,5 @@ export interface Props {
 }
 
 export default function LandingHeader({ title, imageLogoSource }: Props) {
-
-  return (
-    <Header title={title} imageLogoSource={imageLogoSource}/>
-  );
+  return <Header title={title} imageLogoSource={imageLogoSource} />;
 }

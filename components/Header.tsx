@@ -11,9 +11,11 @@ export interface Props {
 }
 
 export default function Header({ title, imageLogoSource }: Props) {
-
   return (
-    <header id="landing-header" className="transition duration-[1s] ease-linear fixed z-10 bg-gradient-to-b from-landing-bg-header from-20%  to-transparent w-full h-[100px] pt-[20px]">
+    <header
+      id="landing-header"
+      className="transition duration-[1s] ease-linear fixed z-10 bg-gradient-to-b from-landing-bg-header from-20%  to-transparent w-full h-[100px] pt-[20px]"
+    >
       <HiddenOnScroll idElement="landing-header" />
       <div className="w-full flex justify-between items-start mr-auto ml-auto pl-3 pr-3 xxl:max-w-[1320px]">
         <a href="/">

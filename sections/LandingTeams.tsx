@@ -1,9 +1,30 @@
+import { useState } from "preact/hooks";
+import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import Image from "deco-sites/std/components/Image.tsx";
+import Container from '../components/Container.tsx'
 import TeamsComponent from "../components/Teams.tsx";
 
-export default function LandingTeams() {
+export type TeamsProps = {
+  name?: string;
+  office?: string;
+  imageUrl?: LiveImage;
+  linkedinIn?: string;
+  twitter?: string;
+  destaque?: boolean;
+}
+
+export interface Props {
+ teans: TeamsProps[]
+}
+
+export default function LandingTeams(props: Props) {
+  const [tableList] = useState<Array<TeamsProps>>(
+    Array.isArray(props.teans) ? props.teans : [],
+  );
+console.log(tableList)
   return (
     <div className="bg-landing-section pt-20 pb-16">
-      <div className="max-w-[1140px] mr-auto ml-auto pl-4 pr-4">
+      <Container>
         <div className="mb-10">
           <h3 className="text-[1.3125rem] text-landing-primary mb-2">WHO</h3>
           <p className="text-[2.01rem] text-white font-medium mb-4">
@@ -33,7 +54,7 @@ export default function LandingTeams() {
               office="Principal"
               imageUrl="/lucas-mohadeb.jpeg"
               linkedinIn="https://www.linkedin.com/in/lucasmohadeb/"
-              small
+              destaque
             />
             <TeamsComponent
               name="Francisco Cappelletti"
@@ -41,25 +62,25 @@ export default function LandingTeams() {
               imageUrl="/fran-color.jpg"
               linkedinIn="https://www.linkedin.com/in/franciscocappelletti/"
               twitter="https://twitter.com/francappelletti"
-              small
+              destaque
             />
             <TeamsComponent
               name="Lucas Santos"
               office="Managing Partner"
               imageUrl="/lucas-color.jpg"
               linkedinIn="https://www.linkedin.com/in/lsantos-/"
-              small
+              destaque
             />
             <TeamsComponent
               name="Lucila Alami"
               office="Office Admin"
               imageUrl="/lucila-color.jpg"
               linkedinIn="https://www.linkedin.com/in/lucila-alami/"
-              small
+              destaque
             />
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
