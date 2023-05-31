@@ -38,15 +38,15 @@ export default {
       "landing-section": "#24232a",
       "landing-primary": "#558bff",
       "white": "#FFF",
-      "hero-overlay":"rgba(0,0,0, 0.5)"
+      "hero-overlay": "rgba(0,0,0, 0.5)",
     },
     screens: {
-      'sm': '576px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1200px',
-      'xxl': '1400px',
-    }
+      "sm": "576px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1200px",
+      "xxl": "1400px",
+    },
   },
   plugins: [],
 };

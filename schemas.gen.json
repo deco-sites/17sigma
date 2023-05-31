@@ -58,6 +58,7 @@
               "deco-sites/std/loaders/vtex/navbar.ts",
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
+              "./islands/HiddenOnScroll.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
@@ -6650,6 +6651,19 @@
       ],
       "title": "deco-sites/std/packs/vtex/loaders/wishlist.ts@Props"
     },
+    "ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvSGlkZGVuT25TY3JvbGwudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "idElement": {
+          "type": "string",
+          "title": "Id Element"
+        }
+      },
+      "required": [
+        "idElement"
+      ],
+      "title": "deco-sites/17sigma/islands/HiddenOnScroll.tsx@Props"
+    },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
       "$ref": "#/root/pages",
       "title": "Page"
@@ -7409,9 +7423,9 @@
           ],
           "title": "Title"
         },
-        "imageUrl": {
+        "imageLogoSource": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Image Url"
+          "title": "Image Logo Source"
         }
       },
       "required": [],
@@ -7436,7 +7450,12 @@
         },
         "videoUrl": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Video",
+          "description": "maximum size limite 20mb",
           "title": "Video Url"
+        },
+        "backgroundImageUrl": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Background Image Url"
         }
       },
       "required": [
@@ -7449,14 +7468,12 @@
     "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdWaWRlb0JyYW5kLnRzeA==@LandingPatnersProps": {
       "type": "object",
       "properties": {
-        "videoUrl": {
+        "videoSource": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Video",
-          "title": "Video Url"
+          "title": "Video Source"
         }
       },
-      "required": [
-        "videoUrl"
-      ],
+      "required": [],
       "title": "deco-sites/17sigma/sections/LandingVideoBrand.tsx@LandingPatnersProps"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props": {
@@ -9443,6 +9460,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0hpZGRlbk9uU2Nyb2xsLnRzeA==": {
+      "title": "./islands/HiddenOnScroll.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvSGlkZGVuT25TY3JvbGwudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/HiddenOnScroll.tsx"
+          ],
+          "default": "./islands/HiddenOnScroll.tsx"
+        }
+      }
+    },
     "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
       "title": "Private Fresh Page",
       "description": "Useful for pages under development.",
@@ -10960,7 +10998,14 @@
     },
     "islands": {
       "title": "islands",
-      "anyOf": []
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0hpZGRlbk9uU2Nyb2xsLnRzeA=="
+        }
+      ]
     },
     "handlers": {
       "title": "handlers",
