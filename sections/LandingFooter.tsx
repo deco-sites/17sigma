@@ -7,11 +7,13 @@ export default function LandingFooter() {
       <Container>
         <div class="flex">
           <div class="h-[7rem] w-[7rem] mr-[10rem]">
-            <img src="../iso.png" alt="" class="h-[100%] w-[100%]"/>
+            <img src="../iso.png" alt="" class="h-[100%] w-[100%]" />
           </div>
 
           <div class="h-12 w-2/4 mt-8 mr-[10rem] flex items-center justify-center">
-            <p class="text-white text-[0.7rem]">All Rights Reserved © 2022 — 17Sigma</p>
+            <p class="text-white text-[0.7rem]">
+              All Rights Reserved © 2022 — 17Sigma
+            </p>
           </div>
 
           <div class="h-11 w-20 mt-8 flex items-center justify-center">
