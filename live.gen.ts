@@ -7,7 +7,8 @@ import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
-import * as $$$$$0 from "./islands/HiddenOnScroll.tsx";
+import * as $$$$$0 from "./islands/FilterPartners.tsx";
+import * as $$$$$1 from "./islands/HiddenOnScroll.tsx";
 import * as $$$$$$$$0 from "./sections/DesignSystem.tsx";
 import * as $$$$$$$$1 from "./sections/GetStarted.tsx";
 import * as $$$$$$$$2 from "./sections/Head.tsx";
@@ -177,7 +178,8 @@ const manifest = {
     "./routes/styles.css.ts": $$$$0,
   },
   "islands": {
-    "./islands/HiddenOnScroll.tsx": $$$$$0,
+    "./islands/FilterPartners.tsx": $$$$$0,
+    "./islands/HiddenOnScroll.tsx": $$$$$1,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i2$$$$0,
