@@ -29,6 +29,7 @@ export default function LandingTeams(teams: Props) {
           <h3 className="text-[1.3125rem] text-landing-primary mb-2">WHO</h3>
           <p className="text-[2.01rem] text-white font-medium mb-4">
             At 17Sigma, we work side by side with entrepreneurs.
+            {console.log(tableList)}
           </p>
         </div>
         <div className="grid gap-10 px-28">

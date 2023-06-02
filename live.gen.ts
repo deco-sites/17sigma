@@ -5,20 +5,20 @@
 import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
-import * as $$$$0 from "./routes/styles.css.ts";
-import * as $$$$1 from "./routes/_app.tsx";
+import * as $$$$0 from "./routes/_app.tsx";
+import * as $$$$1 from "./routes/styles.css.ts";
 import * as $$$$$0 from "./islands/HiddenOnScroll.tsx";
-import * as $$$$$$$$0 from "./sections/DesignSystem.tsx";
-import * as $$$$$$$$1 from "./sections/GetStarted.tsx";
-import * as $$$$$$$$2 from "./sections/Head.tsx";
-import * as $$$$$$$$3 from "./sections/LandingFooter.tsx";
-import * as $$$$$$$$4 from "./sections/LandingForm.tsx";
-import * as $$$$$$$$5 from "./sections/LandingHeader.tsx";
-import * as $$$$$$$$6 from "./sections/LandingHero.tsx";
-import * as $$$$$$$$7 from "./sections/LandingPatners.tsx";
-import * as $$$$$$$$8 from "./sections/LandingTeams.tsx";
-import * as $$$$$$$$9 from "./sections/LandingVideoBrand.tsx";
-import * as $$$$$$$$10 from "./sections/Teste.tsx";
+import * as $$$$$$$$0 from "./sections/LandingTeams.tsx";
+import * as $$$$$$$$1 from "./sections/LandingVideoBrand.tsx";
+import * as $$$$$$$$2 from "./sections/Teste.tsx";
+import * as $$$$$$$$3 from "./sections/LandingHero.tsx";
+import * as $$$$$$$$4 from "./sections/LandingFooter.tsx";
+import * as $$$$$$$$5 from "./sections/LandingForm.tsx";
+import * as $$$$$$$$6 from "./sections/LandingPatners.tsx";
+import * as $$$$$$$$7 from "./sections/GetStarted.tsx";
+import * as $$$$$$$$8 from "./sections/Head.tsx";
+import * as $$$$$$$$9 from "./sections/DesignSystem.tsx";
+import * as $$$$$$$$10 from "./sections/LandingHeader.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -162,7 +162,7 @@ const manifest = {
     "deco-sites/std/functions/vtexWishlist.ts": i2$26,
   },
   "routes": {
-    "./routes/_app.tsx": $$$$1,
+    "./routes/_app.tsx": $$$$0,
     "./routes/_middleware.ts": $live_middleware,
     "./routes/[...catchall].tsx": $live_catchall,
     "./routes/index.tsx": $live_catchall,
@@ -174,7 +174,7 @@ const manifest = {
     "./routes/live/previews/[...block].tsx": $live_previews,
     "./routes/live/release.ts": $live_release,
     "./routes/live/workbench.ts": $live_workbench,
-    "./routes/styles.css.ts": $$$$0,
+    "./routes/styles.css.ts": $$$$1,
   },
   "islands": {
     "./islands/HiddenOnScroll.tsx": $$$$$0,
@@ -183,17 +183,17 @@ const manifest = {
     "$live/sections/PageInclude.tsx": i2$$$$0,
     "$live/sections/Slot.tsx": i2$$$$1,
     "$live/sections/UseSlot.tsx": i2$$$$2,
-    "deco-sites/17sigma/sections/DesignSystem.tsx": $$$$$$$$0,
-    "deco-sites/17sigma/sections/GetStarted.tsx": $$$$$$$$1,
-    "deco-sites/17sigma/sections/Head.tsx": $$$$$$$$2,
-    "deco-sites/17sigma/sections/LandingFooter.tsx": $$$$$$$$3,
-    "deco-sites/17sigma/sections/LandingForm.tsx": $$$$$$$$4,
-    "deco-sites/17sigma/sections/LandingHeader.tsx": $$$$$$$$5,
-    "deco-sites/17sigma/sections/LandingHero.tsx": $$$$$$$$6,
-    "deco-sites/17sigma/sections/LandingPatners.tsx": $$$$$$$$7,
-    "deco-sites/17sigma/sections/LandingTeams.tsx": $$$$$$$$8,
-    "deco-sites/17sigma/sections/LandingVideoBrand.tsx": $$$$$$$$9,
-    "deco-sites/17sigma/sections/Teste.tsx": $$$$$$$$10,
+    "deco-sites/17sigma/sections/DesignSystem.tsx": $$$$$$$$9,
+    "deco-sites/17sigma/sections/GetStarted.tsx": $$$$$$$$7,
+    "deco-sites/17sigma/sections/Head.tsx": $$$$$$$$8,
+    "deco-sites/17sigma/sections/LandingFooter.tsx": $$$$$$$$4,
+    "deco-sites/17sigma/sections/LandingForm.tsx": $$$$$$$$5,
+    "deco-sites/17sigma/sections/LandingHeader.tsx": $$$$$$$$10,
+    "deco-sites/17sigma/sections/LandingHero.tsx": $$$$$$$$3,
+    "deco-sites/17sigma/sections/LandingPatners.tsx": $$$$$$$$6,
+    "deco-sites/17sigma/sections/LandingTeams.tsx": $$$$$$$$0,
+    "deco-sites/17sigma/sections/LandingVideoBrand.tsx": $$$$$$$$1,
+    "deco-sites/17sigma/sections/Teste.tsx": $$$$$$$$2,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,
