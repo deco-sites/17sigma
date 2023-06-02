@@ -26,7 +26,7 @@ export default function TeamsComponent(
             )}
             {twitter && (
               <a href={twitter} target="_blank" className="text-white">
-                <FaTwitter size={destaque ? 24 : 32}/>
+                <FaTwitter size={destaque ? 24 : 32} />
               </a>
             )}
           </div>
