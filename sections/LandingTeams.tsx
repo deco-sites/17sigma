@@ -14,14 +14,14 @@ export type TeamsProps = {
 };
 
 export interface Props {
-  teans: TeamsProps[];
+  teams: TeamsProps[];
 }
 
-export default function LandingTeams(props: Props) {
+export default function LandingTeams(teams: Props) {
   const [tableList] = useState<Array<TeamsProps>>(
-    Array.isArray(props.teans) ? props.teans : [],
+    Array.isArray(teams.teams) ? teams.teams : [],
   );
-  console.log(tableList);
+
   return (
     <div className="bg-landing-section pt-20 pb-16">
       <Container>
@@ -33,51 +33,27 @@ export default function LandingTeams(props: Props) {
         </div>
         <div className="grid gap-10 px-28">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]">
-            <TeamsComponent
-              name="Bianca Sassoon"
-              office="Managing Partner"
-              imageUrl="/bian-color.jpg"
-              linkedinIn="https://www.linkedin.com/in/biancasassoon/"
-              twitter="https://twitter.com/biancasassoon"
-            />
-            <TeamsComponent
-              name="Pierpaolo Barbieri"
-              office="Founder"
-              imageUrl="/pier-color.jpg"
-              linkedinIn="https://www.linkedin.com/in/pierpaolobarbieri/"
-              twitter="https://twitter.com/pbarbieri"
-            />
+            {tableList.filter((item) => item.destaque).map((item) => (
+              <TeamsComponent
+                name={item.name}
+                office={item.office}
+                imageUrl={item.imageUrl}
+                linkedinIn={item.linkedinIn}
+                twitter={item.twitter}
+                destaque={item.destaque}
+              />
+            ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-[2.875rem]">
-            <TeamsComponent
-              name="Luke Mohadeb"
-              office="Principal"
-              imageUrl="/lucas-mohadeb.jpeg"
-              linkedinIn="https://www.linkedin.com/in/lucasmohadeb/"
-              destaque
-            />
-            <TeamsComponent
-              name="Francisco Cappelletti"
-              office="Associate"
-              imageUrl="/fran-color.jpg"
-              linkedinIn="https://www.linkedin.com/in/franciscocappelletti/"
-              twitter="https://twitter.com/francappelletti"
-              destaque
-            />
-            <TeamsComponent
-              name="Lucas Santos"
-              office="Managing Partner"
-              imageUrl="/lucas-color.jpg"
-              linkedinIn="https://www.linkedin.com/in/lsantos-/"
-              destaque
-            />
-            <TeamsComponent
-              name="Lucila Alami"
-              office="Office Admin"
-              imageUrl="/lucila-color.jpg"
-              linkedinIn="https://www.linkedin.com/in/lucila-alami/"
-              destaque
-            />
+            {tableList.filter((item) => !item.destaque).map((item) => (
+              <TeamsComponent
+                name={item.name}
+                office={item.office}
+                imageUrl={item.imageUrl}
+                linkedinIn={item.linkedinIn}
+                twitter={item.twitter}
+              />
+            ))}
           </div>
         </div>
       </Container>
