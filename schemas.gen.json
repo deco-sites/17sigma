@@ -7769,13 +7769,13 @@
     "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdUZWFtcy50c3g=@Props": {
       "type": "object",
       "properties": {
-        "teans": {
+        "teams": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdUZWFtcy50c3g=@TeamsProps[]",
-          "title": "Teans"
+          "title": "Teams"
         }
       },
       "required": [
-        "teans"
+        "teams"
       ],
       "title": "deco-sites/17sigma/sections/LandingTeams.tsx@Props"
     },
