@@ -1,5 +1,5 @@
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import { asset } from '$fresh/runtime.ts'
+import { asset } from "$fresh/runtime.ts";
 import Container from "../components/Container.tsx";
 
 export default function LandingFooter() {
