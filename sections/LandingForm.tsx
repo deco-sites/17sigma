@@ -10,8 +10,8 @@ export default function LandingForm() {
             We would love to hear from you
           </h1>
 
-          <div class="flex flex-row">
-            <div class="h-[18rem] w-[70%]">
+          <div class="flex flex-wrap">
+            <div class="h-[18rem] w-full md:w-[70%]">
               <form action="" class="h-64 mt-1 flex flex-col gap-4">
                 <input
                   class="w-[75.5%] border-b border-b-landing-primary bg-landing-background text-landing-primary placeholder-landing-primary focus:outline-none"
