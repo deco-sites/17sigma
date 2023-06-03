@@ -2,7 +2,7 @@ import ButtonForm from "../components/ButtonForm.tsx";
 import Container from "../components/Container.tsx";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-interface Props {
+export interface Props {
   title?: string;
   first_input_name?: string;
   first_input_id?: string;

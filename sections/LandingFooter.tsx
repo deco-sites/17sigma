@@ -2,7 +2,7 @@ import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { asset } from "$fresh/runtime.ts";
 import Container from "../components/Container.tsx";
 
-interface Props {
+export interface Props {
   logo?: string;
   first_icon?: string;
   first_url?: string;
