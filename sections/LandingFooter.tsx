@@ -3,9 +3,9 @@ import Container from "../components/Container.tsx";
 
 export default function LandingFooter() {
   return (
-    <footer class="h-[7rem] bg-landing-section">
+    <footer class="h-[7rem] w-full bg-landing-section">
       <Container>
-        <div class="flex">
+        <div class="flex mx-auto border">
           <div class="h-[7rem] w-[7rem] mr-[10rem]">
             <img src="../iso.png" alt="" class="h-[100%] w-[100%]" />
           </div>

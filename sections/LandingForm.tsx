@@ -6,7 +6,7 @@ export default function LandingForm() {
     <>
       <div class="h-[28rem] bg-landing-background border-b-transparent">
         <Container>
-          <h1 class="mb-5 pl-24 pt-20 text-[2.5rem] text-white font-bold">
+          <h1 class="mb-5 pt-20 text-[2.5rem] text-white font-bold">
             We would love to hear from you
           </h1>
 
