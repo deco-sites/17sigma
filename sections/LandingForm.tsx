@@ -1,6 +1,6 @@
-import ButtonForm from "../components/ButtonForm.tsx";
 import Container from "../components/Container.tsx";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import ButtonToForm from '../islands/ButtonToForm.tsx'
 
 export interface Props {
   title?: string;
@@ -36,7 +36,7 @@ export default function LandingForm({
   return (
     <>
       <form>
-        <div class="container-xl position-relative bg-landing-background">
+        <div id='contactopen' class="container-xl position-relative bg-landing-background">
           <Container>
             <div class="h-[10rem] flex items-center py-4">
               <h3 class="text-white font-bold text-[2.5rem]">
@@ -109,7 +109,7 @@ export default function LandingForm({
           <p class="mailproblem"></p>
         </div>
       </div>
-      <ButtonForm />
+    <ButtonToForm />
     </>
   );
 }
