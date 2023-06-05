@@ -1,23 +1,21 @@
 import { useState } from "preact/hooks";
 import Form from "./Form.tsx";
-import ThanksContainer from "./ThanksContainer.tsx"
-import { h } from 'preact'
+import ThanksContainer from "./ThanksContainer.tsx";
+import { h } from "preact";
 
 export default function ChangeForm() {
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function getSubmitAction(wasSubmitted: boolean) {
-    event?.preventDefault()
+    event?.preventDefault();
     setIsSubmitted(wasSubmitted);
   }
 
   return (
     <>
-      {
-        isSubmitted
+      {isSubmitted
         ? <ThanksContainer changeContainer={getSubmitAction} />
-        : <Form changeContainer={getSubmitAction} />
-      }
+        : <Form changeContainer={getSubmitAction} />}
     </>
-  )
+  );
 }

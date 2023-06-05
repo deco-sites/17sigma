@@ -1,16 +1,16 @@
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Container from "../components/Container.tsx";
-import { h } from 'preact'
+import { h } from "preact";
 
 type Props = {
-  changeContainer: (wasSubmitted: boolean) => void
-}
+  changeContainer: (wasSubmitted: boolean) => void;
+};
 
 export default function ThanksContainer({ changeContainer }: Props) {
   function handleClick(event: h.JSX.TargetedEvent) {
-    console.log('entrou na function')
-    event.preventDefault()
-    changeContainer(false)
+    console.log("entrou na function");
+    event.preventDefault();
+    changeContainer(false);
   }
 
   return (
@@ -21,11 +21,14 @@ export default function ThanksContainer({ changeContainer }: Props) {
             Thank you for getting in touch!
           </h3>
         </div>
-        <button class="h-14 w-60 rounded-full text-white text-lg bg-landing-primary flex items-center justify-center cursor-pointer gap-1" onClick={handleClick}>
+        <button
+          class="h-14 w-60 rounded-full text-white text-lg bg-landing-primary flex items-center justify-center cursor-pointer gap-1"
+          onClick={handleClick}
+        >
           <AiOutlineArrowRight size={20} />
           SEND ANOTHER
         </button>
       </Container>
     </div>
-  )
+  );
 }

@@ -2,8 +2,8 @@ import { useState } from "preact/hooks";
 import ButtonForm from "../components/ButtonForm.tsx";
 import Container from "../components/Container.tsx";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import LoadingAnimation from '../components/LoadingAnimation.tsx'
-import { h } from 'preact'
+import LoadingAnimation from "../components/LoadingAnimation.tsx";
+import { h } from "preact";
 
 import { useCallback } from "preact/hooks";
 
@@ -21,7 +21,7 @@ export interface Props {
   attachment_button_text?: string;
   submit_button_icon?: string;
   submit_button_text?: string;
-  changeContainer: (wasSubmitted: boolean) => void
+  changeContainer: (wasSubmitted: boolean) => void;
 }
 
 export default function Form({
@@ -43,11 +43,11 @@ export default function Form({
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = useCallback((event: h.JSX.TargetedEvent) => {
-    console.log('entrou nessa primeira função')
+    console.log("entrou nessa primeira função");
     event.preventDefault();
     setIsLoading(true);
     changeContainer(true);
-  }, [])
+  }, []);
 
   return (
     <>
@@ -120,9 +120,7 @@ export default function Form({
         </div>
       </form>
 
-      {
-        isLoading && <LoadingAnimation />
-      }
+      {isLoading && <LoadingAnimation />}
 
       <div class="h-[1rem] flex bg-landing-background">
         <div class="col-md-9">
