@@ -2,6 +2,8 @@ import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { asset } from "$fresh/runtime.ts";
 import Container from "../components/Container.tsx";
 
+import { useCallback } from "preact/hooks";
+
 export interface Props {
   logo?: string;
   first_icon?: string;
