@@ -61,7 +61,7 @@
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/FilterPartners.tsx",
-              "./islands/HiddenOnScroll.tsx",
+              "./islands/Header.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
@@ -6805,6 +6805,40 @@
           "title": "Brand Image Source"
         },
         "category": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "Agtech"
+            },
+            {
+              "type": "string",
+              "const": "Ecommerce / Marketplace"
+            },
+            {
+              "type": "string",
+              "const": "Fintech"
+            },
+            {
+              "type": "string",
+              "const": "Foodtech"
+            },
+            {
+              "type": "string",
+              "const": "Healthtech"
+            },
+            {
+              "type": "string",
+              "const": "Insurtech"
+            },
+            {
+              "type": "string",
+              "const": "SaaS"
+            },
+            {
+              "type": "string",
+              "const": "Web3"
+            }
+          ],
           "type": "string",
           "title": "Category"
         }
@@ -6838,18 +6872,23 @@
       ],
       "title": "deco-sites/17sigma/islands/FilterPartners.tsx@Props"
     },
-    "ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvSGlkZGVuT25TY3JvbGwudHN4@Props": {
+    "ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvSGVhZGVyLnRzeA==@Props": {
       "type": "object",
       "properties": {
-        "idElement": {
-          "type": "string",
-          "title": "Id Element"
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "imageLogoSource": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Image Logo Source"
         }
       },
-      "required": [
-        "idElement"
-      ],
-      "title": "deco-sites/17sigma/islands/HiddenOnScroll.tsx@Props"
+      "required": [],
+      "title": "deco-sites/17sigma/islands/Header.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig": {
       "type": "object",
@@ -10014,12 +10053,12 @@
         }
       }
     },
-    "Li9pc2xhbmRzL0hpZGRlbk9uU2Nyb2xsLnRzeA==": {
-      "title": "./islands/HiddenOnScroll.tsx",
+    "Li9pc2xhbmRzL0hlYWRlci50c3g=": {
+      "title": "./islands/Header.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvSGlkZGVuT25TY3JvbGwudHN4@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvSGVhZGVyLnRzeA==@Props"
         }
       ],
       "required": [
@@ -10029,9 +10068,9 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "./islands/HiddenOnScroll.tsx"
+            "./islands/Header.tsx"
           ],
-          "default": "./islands/HiddenOnScroll.tsx"
+          "default": "./islands/Header.tsx"
         }
       }
     },
@@ -11565,7 +11604,7 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0ZpbHRlclBhcnRuZXJzLnRzeA=="
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL0hpZGRlbk9uU2Nyb2xsLnRzeA=="
+          "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
         }
       ]
     },

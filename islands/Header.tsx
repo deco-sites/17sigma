@@ -1,8 +1,6 @@
 import { asset } from "$fresh/runtime.ts";
-
+import { useEffect, useRef, useState } from "preact/hooks";
 import Image from "deco-sites/std/components/Image.tsx";
-import HiddenOnScroll from "../islands/HiddenOnScroll.tsx";
-
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
 export interface Props {
@@ -11,12 +9,37 @@ export interface Props {
 }
 
 export default function Header({ title, imageLogoSource }: Props) {
+  const [scrollTop, setScrollTop] = useState(window.scrollY);
+
+  const header = useRef<HTMLDivElement>(null);
+
+  const handlerScroll = (event: EventInit) => {
+    if (header.current) {
+      const currentScrollTop = window.scrollY;
+
+      if (currentScrollTop > scrollTop) {
+        header.current.classList.add("-translate-y-[100%]");
+      } else {
+        header.current.classList.remove("-translate-y-[100%]");
+      }
+
+      setScrollTop(currentScrollTop);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("scroll", handlerScroll, { passive: true });
+
+    return (() => {
+      document.removeEventListener("scroll", handlerScroll);
+    });
+  }, [scrollTop]);
+
   return (
     <header
-      id="landing-header"
+      ref={header}
       className="transition duration-[1s] ease-linear fixed z-10 bg-gradient-to-b from-landing-bg-header from-20%  to-transparent w-full h-[100px] pt-[20px]"
     >
-      <HiddenOnScroll idElement="landing-header" />
       <div className="w-full flex justify-between items-start mr-auto ml-auto pl-3 pr-3 xxl:max-w-[1320px]">
         <a href="/">
           {title ? title : (

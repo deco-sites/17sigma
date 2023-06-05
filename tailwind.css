@@ -21,16 +21,58 @@
     -moz-appearance: textfield;
     appearance: textfield;
   }
+
+  body
+  {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @media (max-width:1000px) {
+   
+    html
+    {
+      font-size: 13px;
+    }
+  }
 }
 
 @layer components {
 
+  .partner img{
+    filter: grayscale(1);
+    opacity: .5;
+  }
+
+  .partner:hover img{
+    filter: grayscale(0);
+    opacity: 1;
+  }
+
+  .partner h6 {
+    opacity: 0;
+  }
+
+  .partner:hover h6{
+    opacity: 1;
+  }
 
   /** Prevent scroll when modal is open */
   .no-scroll {
     overflow: hidden;
     height: 100vh;
   }
+
+  @media (max-width:1000px) 
+  {
+   
+    .partner img
+    {
+      filter: unset;
+      opacity: 1;
+    }
+  }
+  
 }
 
 @layer utilities {
