@@ -61,11 +61,10 @@
               "deco-sites/std/loaders/vtex/proxy.ts",
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
-              "./islands/ChangeForm.tsx",
               "./islands/FilterPartners.tsx",
               "./islands/Form.tsx",
+              "./islands/FormTeste.tsx",
               "./islands/HiddenOnScroll.tsx",
-              "./islands/ThanksContainer.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
@@ -7012,14 +7011,9 @@
             "null"
           ],
           "title": "Submit_button_text"
-        },
-        "changeContainer": {
-          "title": "Change Container"
         }
       },
-      "required": [
-        "changeContainer"
-      ],
+      "required": [],
       "title": "deco-sites/17sigma/islands/Form.tsx@Props"
     },
     "ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvSGlkZGVuT25TY3JvbGwudHN4@Props": {
@@ -8472,9 +8466,8 @@
           "type": "string",
           "title": "The audience name (will be used on cookies).",
           "description": "Add a meaningful short word for the audience name.",
-          "maxLength": 22,
           "minLength": 3,
-          "pattern": "^[A-Za-z0-9_]+$"
+          "pattern": "^[A-Za-z0-9_-]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -8590,7 +8583,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|dd83f657b723ebb8e9d97470ddbe37de": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|b3aa45aaff3f13a27398fcac99067685": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -8608,13 +8601,13 @@
           ]
         }
       ],
-      "title": "WorkflowRef|dd83f657b723ebb8e9d97470ddbe37de"
+      "title": "WorkflowRef|b3aa45aaff3f13a27398fcac99067685"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|dd83f657b723ebb8e9d97470ddbe37de",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|b3aa45aaff3f13a27398fcac99067685",
           "title": "Workflow"
         },
         "id": {
@@ -10065,22 +10058,6 @@
         }
       }
     },
-    "Li9pc2xhbmRzL0NoYW5nZUZvcm0udHN4": {
-      "title": "./islands/ChangeForm.tsx",
-      "type": "object",
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "./islands/ChangeForm.tsx"
-          ],
-          "default": "./islands/ChangeForm.tsx"
-        }
-      }
-    },
     "Li9pc2xhbmRzL0ZpbHRlclBhcnRuZXJzLnRzeA==": {
       "title": "./islands/FilterPartners.tsx",
       "type": "object",
@@ -10123,6 +10100,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0Zvcm1UZXN0ZS50c3g=": {
+      "title": "./islands/FormTeste.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/FormTeste.tsx"
+          ],
+          "default": "./islands/FormTeste.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hpZGRlbk9uU2Nyb2xsLnRzeA==": {
       "title": "./islands/HiddenOnScroll.tsx",
       "type": "object",
@@ -10141,22 +10134,6 @@
             "./islands/HiddenOnScroll.tsx"
           ],
           "default": "./islands/HiddenOnScroll.tsx"
-        }
-      }
-    },
-    "Li9pc2xhbmRzL1RoYW5rc0NvbnRhaW5lci50c3g=": {
-      "title": "./islands/ThanksContainer.tsx",
-      "type": "object",
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "./islands/ThanksContainer.tsx"
-          ],
-          "default": "./islands/ThanksContainer.tsx"
         }
       }
     },
@@ -11685,19 +11662,16 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL0NoYW5nZUZvcm0udHN4"
-        },
-        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0ZpbHRlclBhcnRuZXJzLnRzeA=="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0Zvcm0udHN4"
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL0hpZGRlbk9uU2Nyb2xsLnRzeA=="
+          "$ref": "#/definitions/Li9pc2xhbmRzL0Zvcm1UZXN0ZS50c3g="
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL1RoYW5rc0NvbnRhaW5lci50c3g="
+          "$ref": "#/definitions/Li9pc2xhbmRzL0hpZGRlbk9uU2Nyb2xsLnRzeA=="
         }
       ]
     },
