@@ -27,7 +27,7 @@ export default function Partner(
       href={siteUrl}
       title={name}
       target={"_blank"}
-      className="partner flex h-[85px] md:h-[175px] items-center justify-center"
+      className="animate-on-scroll animate-delay:200 partner flex h-[85px] md:h-[175px] items-center justify-center"
       {...props}
     >
       <article className="flex w-100 items-center justify-center flex-col">

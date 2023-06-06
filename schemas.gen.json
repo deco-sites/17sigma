@@ -61,6 +61,7 @@
               "deco-sites/std/loaders/vtex/proxy.ts",
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
+              "./islands/Animate.tsx",
               "./islands/ButtonToForm.tsx",
               "./islands/FilterPartners.tsx",
               "./islands/Header.tsx",
@@ -10096,6 +10097,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0FuaW1hdGUudHN4": {
+      "title": "./islands/Animate.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Animate.tsx"
+          ],
+          "default": "./islands/Animate.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0J1dHRvblRvRm9ybS50c3g=": {
       "title": "./islands/ButtonToForm.tsx",
       "type": "object",
@@ -11682,6 +11699,9 @@
       "anyOf": [
         {
           "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0FuaW1hdGUudHN4"
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0J1dHRvblRvRm9ybS50c3g="
