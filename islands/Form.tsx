@@ -145,7 +145,7 @@ export default function Form({
                     </div>
                   </div>
 
-                  <div class="h-[9rem] flex flex-col mt-[3.5rem]">
+                  <div class="h-[9rem] flex flex-col md:mb-16">
                     <label class="h-14 w-60 mb-7 rounded-full border border-landing-primary bg-landing-background text-landing-primary text-lg flex items-center justify-center cursor-pointer">
                       {attachment_button_text
                         ? attachment_button_text
