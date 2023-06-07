@@ -4,6 +4,48 @@
 
 @layer base {
 
+
+
+  .animate-on-scroll
+  {
+    opacity: 0;
+    transform: translate3d(0px,100px,0px);
+  }
+
+  .animate-on-scroll.active-scroll
+  {
+    opacity: 1;
+    transform: translate3d(0px,0px,0px);
+    transition-duration: .7s;
+    transition-timing-function: ease;
+    transition-property: opacity,transform;
+  }
+
+  .animate-delay-200
+  {
+    transition-delay: .2s;
+  }
+
+  .animate-delay-300
+  {
+    transition-delay: .3s;
+  }
+
+  .animate-delay-400
+  {
+    transition-delay: .4s;
+  }  
+
+  .animate-delay-500
+  {
+    transition-delay: .5s;
+  }
+  .animate-delay-600
+  {
+    transition-delay: .6s;
+  } 
+
+
   /* Allow changing font family via CMS */
   html {
     font-family: var(--font-family);
@@ -21,10 +63,41 @@
     -moz-appearance: textfield;
     appearance: textfield;
   }
+
+  body
+  {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @media (max-width:1000px) {
+   
+    html
+    {
+      font-size: 13px;
+    }
+  }
 }
 
 @layer components {
 
+  .partner img{
+    filter: grayscale(1);
+    opacity: .5;
+  }
+
+  .partner:hover img{
+    filter: grayscale(0);
+    opacity: 1;
+  }
+
+  .partner h6 {
+    opacity: 0;
+  }
+
+  .partner:hover h6{
+    opacity: 1;
+  }
 
   .ball-scale-ripple-multiple>div:nth-child(1) {
     -webkit-animation-delay: -.6s;
@@ -89,6 +162,17 @@
     overflow: hidden;
     height: 100vh;
   }
+
+  @media (max-width:1000px) 
+  {
+   
+    .partner img
+    {
+      filter: unset;
+      opacity: 1;
+    }
+  }
+  
 
 }
 

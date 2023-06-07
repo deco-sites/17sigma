@@ -1,4 +1,6 @@
-export default [
+import { PartnerProps } from "../components/Partner.tsx";
+
+const paterns: PartnerProps[] = [
   {
     "siteUrl": "https://www.aravita.com/",
     "name": "Aravita",
@@ -32,7 +34,7 @@ export default [
     "name": "Florida",
     "country": "Metaverse",
     "brandImageSource": "floridastreet.webp",
-    "category": "Web3, Metaverse",
+    "category": "Web3",
   },
   {
     "siteUrl": "https://www.foodology.com.co/",
@@ -56,18 +58,32 @@ export default [
     "category": "Web3",
   },
   {
-    "siteUrl": "https://www.getontop.com/",
-    "name": "OnTop",
-    "country": "Colombia",
-    "brandImageSource": "foodology.webp",
-    "category": "SaaS",
+    "siteUrl": "https://ng.cash/",
+    "name": "NG Cash",
+    "country": "Brazil",
+    "brandImageSource": "ngcash.webp",
+    "category": "Fintech",
   },
   {
     "siteUrl": "https://www.getontop.com/",
+    "name": "OnTop",
+    "country": "Colombia",
+    "brandImageSource": "ontop.webp",
+    "category": "SaaS",
+  },
+  {
+    "siteUrl": "http://www.oye.co/",
     "name": "Oye",
     "country": "Colombia",
-    "brandImageSource": "getontop.webp",
+    "brandImageSource": "oye.webp",
     "category": "Healthtech",
+  },
+  {
+    "siteUrl": "http://www.sincero.mx/",
+    "name": "Sincero",
+    "country": "Mexico",
+    "brandImageSource": "sincero.webp",
+    "category": "Insurtech",
   },
   {
     "siteUrl": "https://www.tarken.com.br/",
@@ -77,10 +93,19 @@ export default [
     "category": "Agtech",
   },
   {
-    "siteUrl": "https://www.truora.com/en/",
-    "name": "Tarken",
+    "siteUrl": "https://www.trela.com.br/",
+    "name": "Trela",
+    "country": "Brazil",
+    "brandImageSource": "trela.webp",
+    "category": "Ecommerce / Marketplace",
+  },
+  {
+    "siteUrl": "https://www.truora.com/",
+    "name": "Truora",
     "country": "Colombia",
-    "brandImageSource": "truora.webp",
-    "category": "Saas",
+    "brandImageSource": "trela.webp",
+    "category": "SaaS",
   },
 ];
+
+export default paterns;
