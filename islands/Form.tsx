@@ -1,66 +1,192 @@
-import { MutableRef, useEffect, useRef, useState } from "preact/hooks";
-import ButtonForm from "../components/ButtonForm.tsx";
+import { useEffect, useRef, useState } from "preact/hooks";
+// import ButtonForm from "../components/ButtonForm.tsx";
 import Container from "../components/Container.tsx";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import LoadingAnimation from "../components/LoadingAnimation.tsx";
-import { h } from "preact";
+// import { h } from "preact";
 import { ChangeEvent } from "https://esm.sh/v118/preact@10.13.2/compat/src/index.js";
+import { sendMail } from "../helpers/index.ts";
 
-export interface Props {
-  title?: string;
-  first_input_name?: string;
-  first_input_id?: string;
-  first_input_placeholder?: string;
-  second_input_name?: string;
-  second_input_id?: string;
-  second_input_placeholder?: string;
-  thirsty_input_name?: string;
-  thirsty_input_id?: string;
-  thirsty_input_placeholder?: string;
-  attachment_button_text?: string;
-  submit_button_icon?: string;
-  submit_button_text?: string;
+export interface FormLandingProps {
+  /** @description  */
+  hostname: string;
+
+  /** @description */
+  port: number;
+
+  /** @description */
+  username: string;
+
+  /** @description */
+  password: string;
+
+  /** @description */
+  tls: boolean;
+
+  cc?: string;
+
+  /** @description The email that will receive new messages */
+  to: string;
+
+  /** @description The email that will be displayed in users' inbox*/
+  from: string;
+
+  subject: string;
+
+  /** @description This will be the message the user will see in their email*/
+  replyMessage?: string;
+
+  // title?: string;
+  // first_input_name?: string;
+  // first_input_id?: string;
+  // first_input_placeholder?: string;
+  // second_input_name?: string;
+  // second_input_id?: string;
+  // second_input_placeholder?: string;
+  // thirsty_input_name?: string;
+  // thirsty_input_id?: string;
+  // thirsty_input_placeholder?: string;
+  // attachment_button_text?: string;
+  // submit_button_icon?: string;
+  // submit_button_text?: string;
 }
-
 export default function Form({
-  attachment_button_text,
-  first_input_id,
-  first_input_name,
-  first_input_placeholder,
-  second_input_id,
-  second_input_name,
-  second_input_placeholder,
-  thirsty_input_id,
-  thirsty_input_name,
-  thirsty_input_placeholder,
-  submit_button_icon,
-  submit_button_text,
-  title,
-}: Props) {
+  from,
+  to,
+  hostname,
+  password,
+  port,
+  username,
+  subject,
+  cc,
+  tls,
+  replyMessage,
+  // attachment_button_text,
+  // first_input_id,
+  // first_input_name,
+  // first_input_placeholder,
+  // second_input_id,
+  // second_input_name,
+  // second_input_placeholder,
+  // thirsty_input_id,
+  // thirsty_input_name,
+  // thirsty_input_placeholder,
+  // submit_button_icon,
+  // submit_button_text,
+  // title,
+}: FormLandingProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [file, setFile] = useState<File>();
+  const [fileBase64URL, setFileBase64URL] = useState<
+    string | ArrayBuffer | null
+  >();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const form = useRef<HTMLFormElement>(null);
+
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.currentTarget.files) {
+      getBase64(e.currentTarget.files[0])
+        .then((result) => {
+          console.log("File Is", result);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
       setFile(e.currentTarget.files[0]);
     }
   };
 
-  const handlerSubmit = (event: Event) => {
-    console.log(file);
+  const getBase64 = (file: File) => {
+    return new Promise((resolve) => {
+      // Make new FileReader
+      const reader = new FileReader();
 
-    if (name && email && message) {
+      // Convert the file to base64 text
+      reader.readAsDataURL(file);
+
+      // on reader load somthing...
+      reader.onload = () => {
+        // Make a fileInfo Object
+        console.log("Called", reader);
+        setFileBase64URL(reader.result);
+        resolve(reader.result);
+      };
+    });
+  };
+
+  const handlerSubmit = async (event: Event) => {
+    event.preventDefault();
+    // console.log(fileBase64URL);
+
+    if (form.current && name && email && message) {
+      const smtpConfig = {
+        hostname,
+        password,
+        username,
+        port,
+        tls,
+      };
+
+      const mail = new FormData(form.current);
+
+      mail.delete("message");
+      mail.delete("file");
+
+      if (!replyMessage) {
+        mail.delete("full");
+        mail.delete("email");
+      }
+      if (replyMessage) {
+        mail.append("replyMessage", replyMessage);
+      }
+
+      mail.append("smtpConfig", JSON.stringify(smtpConfig));
+      mail.append("to", to);
+      mail.append("from", from);
+      mail.append("subject", subject);
+
+      if (cc) {
+        mail.append("cc", cc);
+      }
+
+      if (file && fileBase64URL) {
+        const nameFile = (file.name + new Date().toDateString().trim())
+          .toLocaleLowerCase();
+        // console.log(nameFile);
+
+        mail.append(
+          "attachment",
+          JSON.stringify({
+            encoding: "base64",
+            name: nameFile,
+            content: fileBase64URL.toString(),
+          }),
+        );
+      }
+
+      mail.append(
+        "content",
+        `${name} got in touch and left the following message: ${message} 
+        contact e-mail: ${email}`,
+      );
+
+      setIsLoading(true);
+
+      const request = await sendMail(mail);
+
+      if (request.status === 200) {
+        setIsLoading(false);
+        setIsSubmitted(true);
+      }
+
       setName("");
       setEmail("");
       setMessage("");
     }
-    setIsLoading(true);
-    // setIsSubmitted(true);
-    event.preventDefault();
   };
 
   return (
@@ -74,7 +200,9 @@ export default function Form({
                   Thank you for getting in touch!
                 </h3>
               </div>
-              <button class="h-14 w-60 rounded-full text-white text-lg bg-landing-primary flex items-center justify-center cursor-pointer gap-1" // onClick={handleClick}
+              <button
+                onClick={() => setIsSubmitted(false)}
+                class="h-14 w-60 rounded-full text-white text-lg bg-landing-primary flex items-center justify-center cursor-pointer gap-1"
               >
                 <AiOutlineArrowRight size={20} />
                 SEND ANOTHER
@@ -83,7 +211,7 @@ export default function Form({
           </div>
         )
         : (
-          <form onSubmit={handlerSubmit}>
+          <form onSubmit={handlerSubmit} ref={form}>
             <div class="container-xl relative bg-landing-background">
               {isLoading && <LoadingAnimation />}
               <Container>
@@ -102,11 +230,9 @@ export default function Form({
                         setName(currentTarget.value)}
                       class="w-[75.5%] border-b border-b-landing-primary bg-landing-background text-landing-primary placeholder-landing-primary focus:outline-none pt-1 pb-1"
                       type="text"
-                      name={first_input_name ? first_input_name : "fullName"}
-                      id={first_input_id ? first_input_id : "fullNameId"}
-                      placeholder={first_input_placeholder
-                        ? first_input_placeholder
-                        : "FULL NAME *"}
+                      name={"fullName"}
+                      id={"fullName"}
+                      placeholder={"FULL NAME *"}
                       required
                     />
 
@@ -115,11 +241,9 @@ export default function Form({
                       onChange={({ currentTarget }) =>
                         setEmail(currentTarget.value)}
                       type="email"
-                      name={second_input_name ? second_input_name : "email"}
-                      id={second_input_id ? second_input_id : "emailId"}
-                      placeholder={second_input_placeholder
-                        ? second_input_placeholder
-                        : "EMAIL *"}
+                      name={"email"}
+                      id={"enmail"}
+                      placeholder={"EMAIL *"}
                       required
                     />
 
@@ -128,13 +252,9 @@ export default function Form({
                         class="h-[4rem] w-full border-b border-landing-primary bg-landing-background text-landing-primary placeholder-landing-primary focus:outline-none"
                         onChange={({ currentTarget }) =>
                           setMessage(currentTarget.value)}
-                        name={thirsty_input_name
-                          ? thirsty_input_name
-                          : "textarea"}
-                        id={thirsty_input_id ? thirsty_input_id : "textareaId"}
-                        placeholder={thirsty_input_placeholder
-                          ? thirsty_input_placeholder
-                          : "SAY SOMETHING *"}
+                        name={"message"}
+                        id={"message"}
+                        placeholder={"SAY SOMETHING *"}
                       >
                       </textarea>
                     </div>
@@ -147,9 +267,7 @@ export default function Form({
 
                   <div class="h-[9rem] flex flex-col md:mb-16">
                     <label class="h-14 w-60 mb-7 rounded-full border border-landing-primary bg-landing-background text-landing-primary text-lg flex items-center justify-center cursor-pointer">
-                      {attachment_button_text
-                        ? attachment_button_text
-                        : "+ ATTACHMENT"}
+                      {"+ ATTACHMENT"}
                       <input
                         type="file"
                         name="file"
@@ -163,10 +281,8 @@ export default function Form({
                       type="submit"
                       class="h-14 w-60 rounded-full text-white text-lg bg-landing-primary flex items-center justify-center cursor-pointer gap-1"
                     >
-                      {submit_button_icon
-                        ? submit_button_icon
-                        : <AiOutlineArrowRight size={20} />}
-                      {submit_button_text ? submit_button_text : "GET IN TOUCH"}
+                      {<AiOutlineArrowRight size={20} />}
+                      {"GET IN TOUCH"}
                     </button>
                   </div>
                 </div>

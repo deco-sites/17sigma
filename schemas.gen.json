@@ -6954,103 +6954,70 @@
       ],
       "title": "deco-sites/17sigma/islands/FilterPartners.tsx@Props"
     },
-    "ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvRm9ybS50c3g=@Props": {
+    "ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvRm9ybS50c3g=@FormLandingProps": {
       "type": "object",
       "properties": {
-        "title": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Title"
+        "hostname": {
+          "type": "string",
+          "title": "Hostname"
         },
-        "first_input_name": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "First_input_name"
+        "port": {
+          "type": "number",
+          "title": "Port"
         },
-        "first_input_id": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "First_input_id"
+        "username": {
+          "type": "string",
+          "title": "Username"
         },
-        "first_input_placeholder": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "First_input_placeholder"
+        "password": {
+          "type": "string",
+          "title": "Password"
         },
-        "second_input_name": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Second_input_name"
+        "tls": {
+          "type": "boolean",
+          "title": "Tls"
         },
-        "second_input_id": {
+        "cc": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Second_input_id"
+          "title": "Cc"
         },
-        "second_input_placeholder": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Second_input_placeholder"
+        "to": {
+          "type": "string",
+          "description": "The email that will receive new messages",
+          "title": "To"
         },
-        "thirsty_input_name": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Thirsty_input_name"
+        "from": {
+          "type": "string",
+          "description": "The email that will be displayed in users' inbox",
+          "title": "From"
         },
-        "thirsty_input_id": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Thirsty_input_id"
+        "subject": {
+          "type": "string",
+          "title": "Subject"
         },
-        "thirsty_input_placeholder": {
+        "replyMessage": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Thirsty_input_placeholder"
-        },
-        "attachment_button_text": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Attachment_button_text"
-        },
-        "submit_button_icon": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Submit_button_icon"
-        },
-        "submit_button_text": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Submit_button_text"
+          "description": "This will be the message the user will see in their email",
+          "title": "Reply Message"
         }
       },
-      "required": [],
-      "title": "deco-sites/17sigma/islands/Form.tsx@Props"
+      "required": [
+        "hostname",
+        "port",
+        "username",
+        "password",
+        "tls",
+        "to",
+        "from",
+        "subject"
+      ],
+      "title": "deco-sites/17sigma/islands/Form.tsx@FormLandingProps"
     },
     "ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvSGVhZGVyLnRzeA==@Props": {
       "type": "object",
@@ -10157,7 +10124,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvRm9ybS50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvRm9ybS50c3g=@FormLandingProps"
         }
       ],
       "required": [
@@ -10532,6 +10499,11 @@
     "ZGVjby1zaXRlcy8xN3NpZ21hL3NlY3Rpb25zL0xhbmRpbmdGb3JtLnRzeA==": {
       "title": "deco-sites/17sigma/sections/LandingForm.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvRm9ybS50c3g=@FormLandingProps"
+        }
+      ],
       "required": [
         "__resolveType"
       ],

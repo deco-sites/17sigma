@@ -1,10 +1,10 @@
 import ButtonToForm from "../islands/ButtonToForm.tsx";
-import Form from "../islands/Form.tsx";
+import Form, { FormLandingProps } from "../islands/Form.tsx";
 
-export default function LandingForm() {
+export default function LandingForm(props: FormLandingProps) {
   return (
     <>
-      <Form />
+      <Form {...props} />
       <ButtonToForm />
     </>
   );
