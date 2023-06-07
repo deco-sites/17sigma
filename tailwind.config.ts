@@ -11,6 +11,7 @@ export const theme = {
   "transparent": "transparent",
   "current": "currentColor",
   "landing-bg-header": "rgba(0,0,0, 0.9)",
+  "form-overlay":"rgba(43, 42, 48, 0.6)",
   "landing-background": "#1f1f26",
   "landing-section": "#24232a",
   "landing-primary": "#558bff",
@@ -39,6 +40,7 @@ export default {
       "landing-primary": "#558bff",
       "white": "#FFF",
       "hero-overlay": "rgba(0,0,0, 0.5)",
+      "form-overlay":"rgba(43, 42, 48, 0.6)"
     },
     screens: {
       "sm": "576px",

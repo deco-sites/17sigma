@@ -1,7 +1,11 @@
 export default function LoadingAnimation() {
   return (
-    <div className="animate-ping h-10 w-10 bg-blue-500 rounded-full inline-block mx-auto">
-      <p class="text-white">Hello, my friend</p>
+    <div  className="bg-form-overlay top-0 left-0 flex items-center justify-center bg-blue-500 absolute h-full w-full"  >
+        <div className='relative loader-inner ball-scale-ripple-multiple'>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
     </div>
   );
 }
