@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'preact/hooks'
+import { useEffect, useState } from "preact/hooks";
 import ButtonForm from "../components/ButtonForm.tsx";
 
 export default function ButtonToForm() {
@@ -6,8 +6,7 @@ export default function ButtonToForm() {
 
   useEffect(() => {
     function handleScroll() {
-
-      const specificSession = document.getElementById('contactopen');
+      const specificSession = document.getElementById("contactopen");
       const { top } = specificSession!.getBoundingClientRect();
 
       if (top && top <= window.innerHeight) {
@@ -17,12 +16,12 @@ export default function ButtonToForm() {
       }
     }
 
-    self.addEventListener('scroll', handleScroll);
+    self.addEventListener("scroll", handleScroll);
 
     return () => {
-      self.removeEventListener('scroll', handleScroll);
+      self.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  return <ButtonForm active={active}/>
+  return <ButtonForm active={active} />;
 }

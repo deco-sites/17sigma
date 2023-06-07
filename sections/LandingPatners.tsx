@@ -18,7 +18,9 @@ export default function LandingPatners(props: Props) {
           <p class="animate-on-scroll animate-delay-200 text-[2.01rem] text-white font-medium mb-4">
             We partner with early stage LatAm startups.
           </p>
-          <p className="animate-on-scroll animate-delay-300 text-[1.3rem] text-white mb-4">Pre-Seed | Seed</p>
+          <p className="animate-on-scroll animate-delay-300 text-[1.3rem] text-white mb-4">
+            Pre-Seed | Seed
+          </p>
         </Container>
         <FilterPartners partners={props.partners} />
       </div>

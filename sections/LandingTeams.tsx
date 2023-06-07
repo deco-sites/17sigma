@@ -1,4 +1,4 @@
-import { useState, useEffect } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import Image from "deco-sites/std/components/Image.tsx";
 import Container from "../components/Container.tsx";
@@ -18,9 +18,7 @@ export interface Props {
   teams: TeamsProps[];
 }
 
-
 export default function LandingTeams(teams: Props) {
-
   const [tableList] = useState<Array<TeamsProps>>(
     Array.isArray(teams.teams) ? teams.teams : [],
   );
@@ -34,12 +32,13 @@ export default function LandingTeams(teams: Props) {
             At 17Sigma, we work side by side with entrepreneurs.
           </p>
         </div>
-        
+
         <div className="grid gap-10 px-28">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]"  data-aos="fade-in">
-        
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 gap-[1.875rem]"
+            data-aos="fade-in"
+          >
             {tableList.filter((item) => item.destaque).map((item) => (
-              
               <TeamsComponent
                 name={item.name}
                 office={item.office}
@@ -48,7 +47,6 @@ export default function LandingTeams(teams: Props) {
                 twitter={item.twitter}
                 destaque={item.destaque}
               />
-              
             ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-[2.875rem]">

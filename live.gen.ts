@@ -7,11 +7,12 @@ import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
-import * as $$$$$1 from "./islands/Form.tsx";
 import * as $$$$$0 from "./islands/Animate.tsx";
 import * as $$$$$1 from "./islands/ButtonToForm.tsx";
 import * as $$$$$2 from "./islands/FilterPartners.tsx";
-import * as $$$$$3 from "./islands/Header.tsx";
+import * as $$$$$3 from "./islands/Form.tsx";
+import * as $$$$$4 from "./islands/FormTeste.tsx";
+import * as $$$$$5 from "./islands/Header.tsx";
 import * as $$$$$$$$0 from "./sections/DesignSystem.tsx";
 import * as $$$$$$$$1 from "./sections/GetStarted.tsx";
 import * as $$$$$$$$2 from "./sections/Head.tsx";
@@ -182,11 +183,12 @@ const manifest = {
     "./routes/styles.css.ts": $$$$0,
   },
   "islands": {
-  "./islands/Form.tsx": $$$$$1,
-  "./islands/Animate.tsx": $$$$$0,
-  "./islands/ButtonToForm.tsx": $$$$$1,
-  "./islands/FilterPartners.tsx": $$$$$2,
-  "./islands/Header.tsx": $$$$$3,
+    "./islands/Animate.tsx": $$$$$0,
+    "./islands/ButtonToForm.tsx": $$$$$1,
+    "./islands/FilterPartners.tsx": $$$$$2,
+    "./islands/Form.tsx": $$$$$3,
+    "./islands/FormTeste.tsx": $$$$$4,
+    "./islands/Header.tsx": $$$$$5,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i2$$$$0,

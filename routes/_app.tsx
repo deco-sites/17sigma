@@ -10,7 +10,7 @@ const trackingId = "";
 export default function App(props: AppProps) {
   return (
     <>
-      <Animate/>
+      <Animate />
       <DesignSystem />
       <GlobalTags />
       {/* Add Tag Manager script during production only. To test it locally remove the condition */}

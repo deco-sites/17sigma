@@ -10,7 +10,7 @@ export function ButtonFilterSelect(
       title={title}
       onClick={onClick}
       {...props}
-      >
+    >
       <span className="hover:border-b-landing-primary hover:border-b-[1px]">
         {title}
       </span>

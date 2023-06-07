@@ -6,8 +6,6 @@ import tailwind from "deco-sites/std/tailwindv3.ts";
 import daisyui from "npm:daisyui@2.51.6";
 import tailwindConfig from "./tailwind.config.ts";
 
-
-
 // Start tailwind background process generation
 tailwind({
   ...tailwindConfig,
