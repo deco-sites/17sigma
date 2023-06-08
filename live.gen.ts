@@ -14,6 +14,7 @@ import * as $$$$$2 from "./islands/FilterPartners.tsx";
 import * as $$$$$3 from "./islands/Form.tsx";
 import * as $$$$$4 from "./islands/FormTeste.tsx";
 import * as $$$$$5 from "./islands/Header.tsx";
+import * as $$$$$6 from "./islands/LandingLoading.tsx";
 import * as $$$$$$$$0 from "./sections/DesignSystem.tsx";
 import * as $$$$$$$$1 from "./sections/GetStarted.tsx";
 import * as $$$$$$$$2 from "./sections/Head.tsx";
@@ -191,6 +192,7 @@ const manifest = {
     "./islands/Form.tsx": $$$$$3,
     "./islands/FormTeste.tsx": $$$$$4,
     "./islands/Header.tsx": $$$$$5,
+    "./islands/LandingLoading.tsx": $$$$$6,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i2$$$$0,
