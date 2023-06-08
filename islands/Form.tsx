@@ -1,3 +1,4 @@
+// deno-lint-ignore-file
 import { useEffect, useRef, useState } from "preact/hooks";
 // import ButtonForm from "../components/ButtonForm.tsx";
 import Container from "../components/Container.tsx";
@@ -6,8 +7,7 @@ import LoadingAnimation from "../components/LoadingAnimation.tsx";
 // import { h } from "preact";
 import { ChangeEvent } from "https://esm.sh/v118/preact@10.13.2/compat/src/index.js";
 import { sendMail } from "../helpers/index.ts";
-import SibApiV3Sdk from "SibApiV3Sdk";
-import emailjs from "emailjs"
+
 
 export interface FormLandingProps {
   /** @description  */
@@ -89,20 +89,6 @@ export default function Form({
 
   const form = useRef<HTMLFormElement>(null);
 
-  const senBlue = ()=>{
-
-    
-    
-    // htmlContent: 'Congratulations! You successfully sent this example campaign via the Brevo API.',
-   
-    // recipients: {listIds: [2, 7]},
-   
-    // scheduledAt: '2018-01-01 00:00:01'
-    // }
-
-    
-  }
-
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.currentTarget.files) {
       getBase64(e.currentTarget.files[0])
@@ -135,120 +121,96 @@ export default function Form({
   };
 
   const handlerSubmit = async (event: Event) => {
+    event.preventDefault();
 
-    // event.preventDefault();
+    const smtpConfig = {
+      hostname,
+      password,
+      username,
+      port,
+      tls,
+    };
 
-    // const defaultClient = SibApiV3Sdk.ApiClient.instance;
-   
-    // const apiKey = defaultClient.authentications['xsmtpsib-6c4e85c3cfaacf8bbfd91f4a326a809eb1ac1803bd399820142bd41874db37b6-5h7OJHxvL1cDdCp4'];
-    // apiKey.apiKey = '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';
+    // const send = await Email.send({
+    //   Host : smtpConfig.hostname,
+    //   Username: smtpConfig.username,
+    //   Password: smtpConfig.password,
+    //   To : to,
+    //   From : from,
+    //   Subject : subject,
+    //   Body : message
+    // })
 
-    // const apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
-
-    // const emailCampaigns = new SibApiV3Sdk.CreateEmailCampaign();
-  
-    // emailCampaigns.name = "teste de api";
-
-    // emailCampaigns.subject = subject;
-
-    // emailCampaigns.sender = {"name": "17Sigma", "email": 'marcosas.soares2@gmail.com'};
-
-    // emailCampaigns.type = "classic";
-
-    // console.log(fileBase64URL);
-    // if (form.current && name && email && message) {
-
-    //  const send = await apiInstance.createEmailCampaign(emailCampaigns);
-    
-        // const templateParams = {
-        //   from_name: from,
-        //   reply_to: 'marcosas.soares2@gmail.com',
-        //   message: message,
-        //   my_file:file
-        // }
-
-        // emailjs.send("service_hzlaupb", "template_zth76w7", templateParams, "GSWGaVWH3Rud3BRhw");
+    // if(send)
+    // {
+    //   console.log(send)
     // }
 
+    if (form.current && name && email && message) {
+      // const templateParams = {
+      //   from_name: 'marcosas.soares2@gmail.com',
+      //   reply_to: 'marcosas.soares2@gmail.com',
+      //   message: 'Teste'
+      // }
 
-    // if (form.current && name && email && message) {
+      const mail = new FormData(form.current);
 
-    //   const templateParams = {
-    //     from_name: 'marcosas.soares2@gmail.com',
-    //     reply_to: 'marcosas.soares2@gmail.com',
-    //     message: 'Teste'
-    //   }
-      
-    //   const smtpConfig = {
-    //     hostname,
-    //     password,
-    //     username,
-    //     port,
-    //     tls,
-    //   };
+      mail.delete("message");
+      mail.delete("file");
 
-    //   const mail = new FormData(form.current);
+      if (!replyMessage) {
+        mail.delete("full");
+        mail.delete("email");
+      }
 
-    //   mail.delete("message");
-    //   mail.delete("file");
+      if (replyMessage) {
+        mail.append("replyMessage", replyMessage);
+      }
 
-    //   if (!replyMessage) 
-    //   {
-    //     mail.delete("full");
-    //     mail.delete("email");
-    //   }
-    //   if (replyMessage) 
-    //   {
-    //     mail.append("replyMessage", replyMessage);
-    //   }
+      mail.append("smtpConfig", JSON.stringify(smtpConfig));
+      mail.append("to", to);
+      mail.append("from", from);
+      mail.append("subject", subject);
 
-    //   mail.append("smtpConfig", JSON.stringify(smtpConfig));
-    //   mail.append("to", to);
-    //   mail.append("from", from);
-    //   mail.append("subject", subject);
+      if (cc) {
+        mail.append("cc", cc);
+      }
 
-    //   if (cc) 
-    //   {
-    //     mail.append("cc", cc);
-    //   }
+      if (file && fileBase64URL) {
+        const nameFile = (file.name + new Date().toDateString().trim())
+          .toLocaleLowerCase();
+        // console.log(nameFile);
 
-    //   if (file && fileBase64URL) 
-    //   {
-    //     const nameFile = (file.name + new Date().toDateString().trim())
-    //       .toLocaleLowerCase();
-    //     // console.log(nameFile);
+        mail.append(
+          "attachment",
+          JSON.stringify({
+            encoding: "base64",
+            name: nameFile,
+            content: fileBase64URL.toString(),
+          }),
+        );
+      }
 
-    //     mail.append(
-    //       "attachment",
-    //       JSON.stringify({
-    //         encoding: "base64",
-    //         name: nameFile,
-    //         content: fileBase64URL.toString(),
-    //       }),
-    //     );
-    //   }
+      mail.append(
+        "content",
+        `${name} got in touch and left the following message: ${message} 
+        contact e-mail: ${email}`,
+      );
 
-    //   mail.append(
-    //     "content",
-    //     `${name} got in touch and left the following message: ${message} 
-    //     contact e-mail: ${email}`,
-    //   );
+      setIsLoading(true);
 
-    //   setIsLoading(true);
+      const request = await sendMail(mail);
 
-    //   const request = await sendMail(mail);
+      if (request.status === 200) {
+        setIsLoading(false);
+        setIsSubmitted(true);
+      }
 
-    //   if (request.status === 200) 
-    //   {
-    //     setIsLoading(false);
-    //     setIsSubmitted(true);
-    //   }
-
-    //   setName("");
-    //   setEmail("");
-    //   setMessage("");
-    // }
-    
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
+    event.preventDefault();
   };
 
   return (

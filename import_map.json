@@ -16,6 +16,5 @@
     "react-icons/ai": "https://deno.land/x/react_icons@0.2.3/ai/mod.ts",
     "emailjs": "https://esm.sh/@emailjs/browser@3.11.0",
     "SibApiV3Sdk": "https://esm.sh/sib-api-v3-sdk"
-
   }
 }
