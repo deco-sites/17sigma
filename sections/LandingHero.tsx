@@ -25,9 +25,11 @@ export default function LandingHero(
           autoPlay
           muted
           loop
+          onLoad={(e)=> console.log(e,'terminou 1')}
           className="h-full w-full object-cover"
         >
-          <source
+          <source 
+            onLoad={(e)=> console.log(e,'terminou 2')}
             src={videoUrl ? videoUrl : asset("/hero-video.mp4")}
             type="video/mp4"
           />
