@@ -4,7 +4,83 @@
 
 @layer base {
 
+ /*App Loading*/
 
+
+ #loading.closing .loading-door:nth-child(1)
+ { 
+   transform: translate3d(-100%,0px,0px);
+   transition: all .5s ease-in-out;
+ }
+ #loading.closing .loading-door:nth-child(2)
+ {
+   transform: translate3d(100%,0px,0px);
+   transition: all .5s ease-in-out;
+ }
+
+ #loading.closing svg
+ {
+   opacity: 0;
+   transition: opaciy .5s ease-in;
+ }
+/*Loading Logo Animate*/
+.sigma-one-1.loading-close{
+  fill: url(#one-close-1);
+}
+.sigma-one-2.loading-close{
+  fill: url(#one-close-2);
+}
+.sigma-one-3.loading-close{
+  fill: url(#one-close-3);
+}
+.sigma-seven-1.loading-close{
+  fill: url(#seven-close-1);
+}
+.sigma-seven-2.loading-close{
+  fill: url(#seven-close-2);
+}
+.sigma-seven-3.loading-close{
+  fill: url(#seven-close-3);
+}
+.sigma-six-1.loading-close{
+  fill: url(#six-close-1);
+}
+.sigma-six-2.loading-close{
+  fill: url(#six-close-2);
+}
+.sigma-one-1.loading-open{
+  fill: url(#one-open-1);
+}
+.sigma-one-2.loading-open{
+  fill: url(#one-open-2);
+}
+.sigma-one-3.loading-open{
+  fill: url(#one-open-3);
+}
+.sigma-seven-1.loading-open{
+  fill: url(#seven-open-1);
+}
+.sigma-seven-2.loading-open{
+  fill: url(#seven-open-2);
+}
+.sigma-seven-3.loading-open{
+  fill: url(#seven-open-3);
+}
+.sigma-six-1.loading-open{
+  fill: url(#six-open-1);
+}
+.sigma-six-2.loading-open{
+  fill: url(#six-open-2);
+}
+
+loading-logo-animate{
+  max-width: 100%;
+  width: 232px;
+}
+
+loading-logo-animate svg{
+  max-width: 100%;
+}
 
   .animate-on-scroll
   {
@@ -80,6 +156,10 @@
 }
 
 @layer components {
+
+
+
+
 
   .partner img{
     filter: grayscale(1) brightness(10);

@@ -67,6 +67,7 @@
               "./islands/Form.tsx",
               "./islands/FormTeste.tsx",
               "./islands/Header.tsx",
+              "./islands/LandingLoading.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
@@ -10189,6 +10190,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0xhbmRpbmdMb2FkaW5nLnRzeA==": {
+      "title": "./islands/LandingLoading.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/LandingLoading.tsx"
+          ],
+          "default": "./islands/LandingLoading.tsx"
+        }
+      }
+    },
     "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
       "title": "Private Fresh Page",
       "description": "Useful for pages under development.",
@@ -11735,6 +11752,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0xhbmRpbmdMb2FkaW5nLnRzeA=="
         }
       ]
     },
