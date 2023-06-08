@@ -26,7 +26,7 @@ export default function TitleHero(props: Props) {
       max-w-full
     text-landing-primary font-semibold leading-[0.98em] drop-shadow-[2px_2px_1px_rgb(0,0,0)] 
       md:drop-shadow-drop-shadow-none 
-      brightness-110 md:brightness-0">
+      brightness-110 md:brightness-100">
       {textList.map(({ highLight, text }) => {
         if (highLight) {
           return <span class="text-white">{text}</span>;
