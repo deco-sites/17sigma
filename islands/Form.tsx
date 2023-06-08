@@ -6,6 +6,8 @@ import LoadingAnimation from "../components/LoadingAnimation.tsx";
 // import { h } from "preact";
 import { ChangeEvent } from "https://esm.sh/v118/preact@10.13.2/compat/src/index.js";
 import { sendMail } from "../helpers/index.ts";
+import SibApiV3Sdk from "SibApiV3Sdk";
+import emailjs from "emailjs"
 
 export interface FormLandingProps {
   /** @description  */
@@ -87,6 +89,20 @@ export default function Form({
 
   const form = useRef<HTMLFormElement>(null);
 
+  const senBlue = ()=>{
+
+    
+    
+    // htmlContent: 'Congratulations! You successfully sent this example campaign via the Brevo API.',
+   
+    // recipients: {listIds: [2, 7]},
+   
+    // scheduledAt: '2018-01-01 00:00:01'
+    // }
+
+    
+  }
+
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.currentTarget.files) {
       getBase64(e.currentTarget.files[0])
@@ -119,74 +135,120 @@ export default function Form({
   };
 
   const handlerSubmit = async (event: Event) => {
-    event.preventDefault();
+
+    // event.preventDefault();
+
+    // const defaultClient = SibApiV3Sdk.ApiClient.instance;
+   
+    // const apiKey = defaultClient.authentications['xsmtpsib-6c4e85c3cfaacf8bbfd91f4a326a809eb1ac1803bd399820142bd41874db37b6-5h7OJHxvL1cDdCp4'];
+    // apiKey.apiKey = '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';
+
+    // const apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
+
+    // const emailCampaigns = new SibApiV3Sdk.CreateEmailCampaign();
+  
+    // emailCampaigns.name = "teste de api";
+
+    // emailCampaigns.subject = subject;
+
+    // emailCampaigns.sender = {"name": "17Sigma", "email": 'marcosas.soares2@gmail.com'};
+
+    // emailCampaigns.type = "classic";
+
     // console.log(fileBase64URL);
+    // if (form.current && name && email && message) {
 
-    if (form.current && name && email && message) {
-      const smtpConfig = {
-        hostname,
-        password,
-        username,
-        port,
-        tls,
-      };
+    //  const send = await apiInstance.createEmailCampaign(emailCampaigns);
+    
+        // const templateParams = {
+        //   from_name: from,
+        //   reply_to: 'marcosas.soares2@gmail.com',
+        //   message: message,
+        //   my_file:file
+        // }
 
-      const mail = new FormData(form.current);
+        // emailjs.send("service_hzlaupb", "template_zth76w7", templateParams, "GSWGaVWH3Rud3BRhw");
+    // }
 
-      mail.delete("message");
-      mail.delete("file");
 
-      if (!replyMessage) {
-        mail.delete("full");
-        mail.delete("email");
-      }
-      if (replyMessage) {
-        mail.append("replyMessage", replyMessage);
-      }
+    // if (form.current && name && email && message) {
 
-      mail.append("smtpConfig", JSON.stringify(smtpConfig));
-      mail.append("to", to);
-      mail.append("from", from);
-      mail.append("subject", subject);
+    //   const templateParams = {
+    //     from_name: 'marcosas.soares2@gmail.com',
+    //     reply_to: 'marcosas.soares2@gmail.com',
+    //     message: 'Teste'
+    //   }
+      
+    //   const smtpConfig = {
+    //     hostname,
+    //     password,
+    //     username,
+    //     port,
+    //     tls,
+    //   };
 
-      if (cc) {
-        mail.append("cc", cc);
-      }
+    //   const mail = new FormData(form.current);
 
-      if (file && fileBase64URL) {
-        const nameFile = (file.name + new Date().toDateString().trim())
-          .toLocaleLowerCase();
-        // console.log(nameFile);
+    //   mail.delete("message");
+    //   mail.delete("file");
 
-        mail.append(
-          "attachment",
-          JSON.stringify({
-            encoding: "base64",
-            name: nameFile,
-            content: fileBase64URL.toString(),
-          }),
-        );
-      }
+    //   if (!replyMessage) 
+    //   {
+    //     mail.delete("full");
+    //     mail.delete("email");
+    //   }
+    //   if (replyMessage) 
+    //   {
+    //     mail.append("replyMessage", replyMessage);
+    //   }
 
-      mail.append(
-        "content",
-        `${name} got in touch and left the following message: ${message} 
-        contact e-mail: ${email}`,
-      );
+    //   mail.append("smtpConfig", JSON.stringify(smtpConfig));
+    //   mail.append("to", to);
+    //   mail.append("from", from);
+    //   mail.append("subject", subject);
 
-      setIsLoading(true);
+    //   if (cc) 
+    //   {
+    //     mail.append("cc", cc);
+    //   }
 
-      const request = await sendMail(mail);
+    //   if (file && fileBase64URL) 
+    //   {
+    //     const nameFile = (file.name + new Date().toDateString().trim())
+    //       .toLocaleLowerCase();
+    //     // console.log(nameFile);
 
-      if (request.status === 200) {
-        setIsLoading(false);
-        setIsSubmitted(true);
-      }
+    //     mail.append(
+    //       "attachment",
+    //       JSON.stringify({
+    //         encoding: "base64",
+    //         name: nameFile,
+    //         content: fileBase64URL.toString(),
+    //       }),
+    //     );
+    //   }
 
-      setName("");
-      setEmail("");
-      setMessage("");
-    }
+    //   mail.append(
+    //     "content",
+    //     `${name} got in touch and left the following message: ${message} 
+    //     contact e-mail: ${email}`,
+    //   );
+
+    //   setIsLoading(true);
+
+    //   const request = await sendMail(mail);
+
+    //   if (request.status === 200) 
+    //   {
+    //     setIsLoading(false);
+    //     setIsSubmitted(true);
+    //   }
+
+    //   setName("");
+    //   setEmail("");
+    //   setMessage("");
+    // }
+    
   };
 
   return (
