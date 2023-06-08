@@ -21,12 +21,12 @@ export default function TeamsComponent(
           <div className="absolute bottom-7 right-7 opacity-0 group-hover:opacity-100 flex items-center gap-2">
             {linkedinIn && (
               <a href={linkedinIn} target="_blank" className="text-white">
-                <FaLinkedinIn size={destaque ? 24 : 32} />
+                <FaLinkedinIn size={destaque ? 32 : 24} />
               </a>
             )}
             {twitter && (
               <a href={twitter} target="_blank" className="text-white">
-                <FaTwitter size={destaque ? 24 : 32} />
+                <FaTwitter size={destaque ? 32 : 24} />
               </a>
             )}
           </div>
