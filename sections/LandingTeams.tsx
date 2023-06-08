@@ -27,7 +27,9 @@ export default function LandingTeams(teams: Props) {
     <div className="bg-landing-section pt-20 pb-16">
       <Container>
         <div className="mb-10">
-          <h3 className="text-[1.3125rem] text-landing-primary mb-2 animate-on-scroll">WHO</h3>
+          <h3 className="text-[1.3125rem] text-landing-primary mb-2 animate-on-scroll">
+            WHO
+          </h3>
           <p className="text-[2.01rem] text-white font-medium mb-4 animate-on-scroll animate-delay-200">
             At 17Sigma, we work side by side with entrepreneurs.
           </p>

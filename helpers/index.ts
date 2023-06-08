@@ -1,38 +1,3 @@
-import { Attachment } from "https://deno.land/x/denomailer@1.6.0/config/mail/attachments.ts";
-
-export interface FormProps {
-  fullname: string;
-  email: string;
-  message: string;
-  upload?: Attachment[];
-}
-
-export interface MailConfigSMTP {
-  hostname: string;
-
-  /** @description */
-  port: number;
-
-  /** @description */
-  username: string;
-
-  /** @description */
-  password: string;
-
-  /** @description */
-  tls?: boolean | undefined;
-}
-
-export interface MailProps {
-  from: string;
-  to: string;
-  subject: string;
-  content: string;
-  html?: string;
-  cc?: string;
-  attachments?: Attachment[];
-}
-
 export function accentuationReplaceText(text: string) {
   return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
@@ -58,4 +23,8 @@ export async function sendMail(mail: FormData) {
     method: "POST",
     body: mail,
   });
+}
+
+export function isValidEmail(email: string) {
+  return new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/).test(email);
 }

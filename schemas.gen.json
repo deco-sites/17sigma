@@ -6954,68 +6954,80 @@
       ],
       "title": "deco-sites/17sigma/islands/FilterPartners.tsx@Props"
     },
-    "ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvRm9ybS50c3g=@FormLandingProps": {
+    "ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvRm9ybS50c3g=@HeaderKey": {
       "type": "object",
       "properties": {
-        "hostname": {
+        "keyName": {
           "type": "string",
-          "title": "Hostname"
+          "title": "Key Name"
         },
-        "port": {
-          "type": "number",
-          "title": "Port"
-        },
-        "username": {
+        "value": {
           "type": "string",
-          "title": "Username"
-        },
-        "password": {
-          "type": "string",
-          "title": "Password"
-        },
-        "tls": {
-          "type": "boolean",
-          "title": "Tls"
-        },
-        "cc": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Cc"
-        },
-        "to": {
-          "type": "string",
-          "description": "The email that will receive new messages",
-          "title": "To"
-        },
-        "from": {
-          "type": "string",
-          "description": "The email that will be displayed in users' inbox",
-          "title": "From"
-        },
-        "subject": {
-          "type": "string",
-          "title": "Subject"
-        },
-        "replyMessage": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "description": "This will be the message the user will see in their email",
-          "title": "Reply Message"
+          "title": "Value"
         }
       },
       "required": [
-        "hostname",
-        "port",
-        "username",
-        "password",
-        "tls",
-        "to",
-        "from",
-        "subject"
+        "keyName",
+        "value"
+      ],
+      "title": "HeaderKey"
+    },
+    "ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvRm9ybS50c3g=@HeaderKey[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvRm9ybS50c3g=@HeaderKey"
+      },
+      "title": "HeaderKey[]"
+    },
+    "ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvRm9ybS50c3g=@FormLandingProps": {
+      "type": "object",
+      "properties": {
+        "textStartForm": {
+          "type": "string",
+          "description": "write a initial text for your form",
+          "title": "Text Start Form"
+        },
+        "textThanksForm": {
+          "type": "string",
+          "description": "write a thank you text for your form",
+          "title": "Text Thanks Form"
+        },
+        "endpoint": {
+          "type": "string",
+          "description": "where the form should send the data",
+          "title": "Endpoint"
+        },
+        "headerkeys": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy8xN3NpZ21hL2lzbGFuZHMvRm9ybS50c3g=@HeaderKey[]",
+          "description": "add the keys to the request header if needed",
+          "title": "Headerkeys"
+        },
+        "inputName": {
+          "type": "string",
+          "title": "Input Name"
+        },
+        "inputEmail": {
+          "type": "string",
+          "title": "Input Email"
+        },
+        "inputUpload": {
+          "type": "string",
+          "title": "Input Upload"
+        },
+        "inputMessage": {
+          "type": "string",
+          "title": "Input Message"
+        }
+      },
+      "required": [
+        "textStartForm",
+        "textThanksForm",
+        "endpoint",
+        "headerkeys",
+        "inputName",
+        "inputEmail",
+        "inputUpload",
+        "inputMessage"
       ],
       "title": "deco-sites/17sigma/islands/Form.tsx@FormLandingProps"
     },
