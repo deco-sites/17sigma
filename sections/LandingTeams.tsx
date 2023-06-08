@@ -24,6 +24,8 @@ export default function LandingTeams(teams: Props) {
   );
 
   return (
+    <>
+    <a name="who"></a>
     <div className="bg-landing-section pt-20 pb-16">
       <Container>
         <div className="mb-10">
@@ -65,5 +67,6 @@ export default function LandingTeams(teams: Props) {
         </div>
       </Container>
     </div>
+     </> 
   );
 }
