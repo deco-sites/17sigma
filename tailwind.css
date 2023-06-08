@@ -82,7 +82,8 @@
 @layer components {
 
   .partner img{
-    filter: grayscale(1);
+    filter: grayscale(1) brightness(10);
+    -webkit-filter: grayscale(1) brightness(10);
     opacity: .5;
   }
 
