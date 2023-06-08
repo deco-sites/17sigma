@@ -39,7 +39,7 @@ export default {
       "landing-section": "#24232a",
       "landing-primary": "#558bff",
       "white": "#FFF",
-      "hero-overlay": "rgba(0,0,0, 0.5)",
+      "hero-overlay": "rgba(0,0,0, 0.7)",
       "form-overlay": "rgba(43, 42, 48, 0.6)",
     },
     screens: {

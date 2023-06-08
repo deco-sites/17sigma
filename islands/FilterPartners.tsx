@@ -290,7 +290,6 @@ export default function FilterPartners(props: Props) {
       <div
         id="filterArea"
         ref={filterArea}
-        aria-expanded={showFilter ? "true" : "false"}
         className="pt-16 pb-16 w-full absolute top-0 left-0 z-10"
         style={{
           backgroundColor: `${
