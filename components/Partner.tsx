@@ -30,7 +30,7 @@ export default function Partner(
       className="animate-on-scroll animate-delay:200 partner flex h-[85px] md:h-[175px] items-center justify-center"
       {...props}
     >
-      <article className="flex w-100 items-center justify-center flex-col">
+      <article className="flex w-100 items-center justify-center flex-col max-w-[55%]">
         <img
           src={brandImageSource
             ? brandImageSource

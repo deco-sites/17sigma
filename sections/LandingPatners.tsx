@@ -10,7 +10,9 @@ export interface Props {
 export default function LandingPatners(props: Props) {
   {
     return (
-      <div id="what" className="bg-landing-background pt-20 pb-16">
+      <>
+        <a name="what"></a>
+        <div  className="bg-landing-background pt-20 pb-16">
         <Container>
           <h3 class="animate-on-scroll text-[1.3125rem] text-landing-primary mb-2 uppercase">
             What
@@ -24,6 +26,7 @@ export default function LandingPatners(props: Props) {
         </Container>
         <FilterPartners partners={props.partners} />
       </div>
+      </>
     );
   }
 }

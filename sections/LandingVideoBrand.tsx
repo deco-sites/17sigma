@@ -10,7 +10,7 @@ export default function LandingPatners({
 }: LandingPatnersProps) {
   return (
     <>
-      <a href="#what"></a>
+      <a name="why"></a>
       <video
         controls
         playsInline
