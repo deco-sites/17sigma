@@ -33,7 +33,6 @@ export interface MailProps {
   attachments?: Attachment[];
 }
 
-
 export function accentuationReplaceText(text: string) {
   return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
@@ -53,7 +52,6 @@ export function orderArrayAZ(data: string[]) {
   return data.map((value) => accentuationReplaceText(value)).sort();
 }
 
-
 export async function sendMail(mail: FormData) {
   // console.log(Object.fromEntries(mail));
   return await fetch(`${location.origin}/api/v1/mail/send`, {
@@ -61,4 +59,3 @@ export async function sendMail(mail: FormData) {
     body: mail,
   });
 }
-

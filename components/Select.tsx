@@ -25,7 +25,7 @@ export function Select(
         {active ? <FaChevronDown size={12} /> : <FaChevronRight size={12} />}
       </button>
       <div
-        role="listbox"
+        role="menu"
         aria-sort="ascending"
         aria-labelledby={"options-select-" + ariaLabelledby}
         data-filter={filterName}

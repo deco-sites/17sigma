@@ -5,7 +5,7 @@ export function ButtonFilterSelect(
 ) {
   return (
     <button
-      role="option"
+      role="menuitem"
       className="block max-w-full text-left mb-2"
       title={title}
       onClick={onClick}
