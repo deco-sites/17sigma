@@ -15,16 +15,17 @@ export default function LoadingProvider(props: PropsWithChildren) {
       setAppLoading(true);
     };
 
-    
     // Check if the page has already loaded
-    if (document.readyState === "loading" || document.readyState === "complete") {
+    if (
+      document.readyState === "complete"
+    ) {
       onPageLoad();
     } else {
       self.addEventListener("load", onPageLoad);
       // Remove the event listener when component unmounts
-      return () => self.removeEventListener("load", onPageLoad);
     }
- 
+
+    return( () => self.removeEventListener("load", onPageLoad));
   }, []);
 
   return (

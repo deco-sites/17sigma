@@ -10,7 +10,7 @@ export function LogoAnimate(
     <div className="loading-logo-animate w-[25%] z-10">
       {start && (
         <svg
-          style={{maxWidth: '100%'}}
+          style={{ maxWidth: "100%" }}
           width="363"
           height="272"
           viewBox="0 0 363 272"

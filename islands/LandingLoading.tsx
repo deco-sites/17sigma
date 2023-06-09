@@ -18,28 +18,24 @@ export default function LandingLoading({ loading }: LandingLoadingProps) {
     }
   }, [loading]);
 
-
-
   useEffect(() => {
-
-      const startInterval = () => setInterval(() => {
+    const startInterval = () =>
+      setInterval(() => {
         setStart(!start);
       }, 600);
 
-      const interval = startInterval();
+    const interval = startInterval();
 
-      if(!loading)
-      {
-        return (() => {
-          clearInterval(interval);
-        });
-      }
-
+    if (!loading) {
       return (() => {
         clearInterval(interval);
       });
-      
-  }, [loading,start]);
+    }
+
+    return (() => {
+      clearInterval(interval);
+    });
+  }, [loading, start]);
 
   return (
     <div
