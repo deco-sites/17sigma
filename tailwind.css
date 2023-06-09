@@ -73,12 +73,12 @@
   fill: url(#six-open-2);
 }
 
-loading-logo-animate{
+.loading-logo-animate{
   max-width: 100%;
   width: 232px;
 }
 
-loading-logo-animate svg{
+.loading-logo-animate svg{
   max-width: 100%;
 }
 
