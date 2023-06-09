@@ -73,14 +73,30 @@
   fill: url(#six-open-2);
 }
 
-loading-logo-animate{
+.loading-logo-animate{
   max-width: 100%;
   width: 232px;
 }
 
-loading-logo-animate svg{
+.loading-logo-animate svg{
   max-width: 100%;
 }
+
+/* .loading-logo-animate svg{ 
+  animation: .6s linear infinite linearGradient;
+} */
+
+@keyframes linearGradient { 
+  0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+  }
 
   .animate-on-scroll
   {

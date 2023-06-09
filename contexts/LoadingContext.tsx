@@ -1,12 +1,13 @@
-import { useState,useEffect} from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { createContext } from "preact";
-import React, { PropsWithChildren } from "https://esm.sh/v118/preact@10.13.2/compat/src/index.js";
+import React, {
+  PropsWithChildren,
+} from "https://esm.sh/v118/preact@10.13.2/compat/src/index.js";
 import LandingLoading from "../islands/LandingLoading.tsx";
 
 const LoadingContext = createContext({});
 
-export default function LoadingProvider(props:PropsWithChildren) {
-
+export default function LoadingProvider(props: PropsWithChildren) {
   const [appLoading, setAppLoading] = useState(false);
 
   useEffect(() => {
@@ -15,14 +16,16 @@ export default function LoadingProvider(props:PropsWithChildren) {
     };
 
     // Check if the page has already loaded
-    if (document.readyState === 'complete') 
-    {
+    if (
+      document.readyState === "complete"
+    ) {
       onPageLoad();
     } else {
-      self.addEventListener('load', onPageLoad);
+      self.addEventListener("load", onPageLoad);
       // Remove the event listener when component unmounts
-      return () => self.removeEventListener('load', onPageLoad);
     }
+
+    return (() => self.removeEventListener("load", onPageLoad));
   }, []);
 
   return (
