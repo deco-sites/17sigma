@@ -25,7 +25,7 @@ export default function LoadingProvider(props: PropsWithChildren) {
       // Remove the event listener when component unmounts
     }
 
-    return( () => self.removeEventListener("load", onPageLoad));
+    return (() => self.removeEventListener("load", onPageLoad));
   }, []);
 
   return (
